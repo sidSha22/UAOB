@@ -1,0 +1,148 @@
+{
+  "questions": [
+    {
+      "id": "q-001",
+      "text": "What was reported about the tail pulley?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0391"]
+    },
+    {
+      "id": "q-002",
+      "text": "What was reported about the bend pulley?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0056"]
+    },
+    {
+      "id": "q-003",
+      "text": "What problem was reported with the air conditioner?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0000", "gold-0001", "gold-0002", "gold-0003", "gold-0004", "gold-0052", "gold-0064", "gold-0065"]
+    },
+    {
+      "id": "q-004",
+      "text": "What work was recorded on the horn?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0008", "gold-0009", "gold-0010", "gold-0011", "gold-0012", "gold-0013", "gold-0014", "gold-0015"]
+    },
+    {
+      "id": "q-005",
+      "text": "What damage was reported to the cabin door?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0109"]
+    },
+    {
+      "id": "q-006",
+      "text": "What was the reported fault with the brake?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0066", "gold-0092", "gold-0093", "gold-0094", "gold-0095", "gold-0096", "gold-0134", "gold-0181"]
+    },
+    {
+      "id": "q-007",
+      "text": "What was done about the weeping boom cylinder hose?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0183"]
+    },
+    {
+      "id": "q-008",
+      "text": "What work was recorded on the bucket?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0078", "gold-0084", "gold-0087", "gold-0108", "gold-0177", "gold-0279", "gold-0315", "gold-0324"]
+    },
+    {
+      "id": "q-009",
+      "text": "Where was the coolant hose leaking?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0208"]
+    },
+    {
+      "id": "q-010",
+      "text": "What was the reported condition of the steering cylinder bearings?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0333"]
+    },
+    {
+      "id": "q-011",
+      "text": "What was wrong with the exhaust shield?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0703"]
+    },
+    {
+      "id": "q-012",
+      "text": "What action was taken on the stabilizer bar?",
+      "stratum": "single_hop",
+      "gold_evidence": ["gold-0136"]
+    },
+    {
+      "id": "q-013",
+      "text": "Which maintenance activities are most frequently performed on pulleys across the fleet?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0563", "gold-0573", "gold-0207", "gold-0319", "gold-0759"]
+    },
+    {
+      "id": "q-014",
+      "text": "Which assets have both a replacement and a repair recorded against them?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0324", "gold-0315", "gold-0713", "gold-0701", "gold-0084", "gold-0087", "gold-0279", "gold-0528"]
+    },
+    {
+      "id": "q-015",
+      "text": "Which assets appear most often in the maintenance record?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0064", "gold-0065", "gold-0066", "gold-0067", "gold-0069", "gold-0070", "gold-0037", "gold-0085"]
+    },
+    {
+      "id": "q-017",
+      "text": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-1002", "gold-1009", "gold-1028", "gold-0536", "gold-0796", "gold-0001", "gold-0537", "gold-0675"]
+    },
+    {
+      "id": "q-018",
+      "text": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0520", "gold-0796", "gold-0003", "gold-0001", "gold-0052", "gold-0801", "gold-0002", "gold-0011"]
+    },
+    {
+      "id": "q-019",
+      "text": "Which activities are applied across the widest range of different assets?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0293", "gold-0975", "gold-0777", "gold-1005", "gold-0818", "gold-1011", "gold-0147", "gold-0776"]
+    },
+    {
+      "id": "q-020",
+      "text": "Are there assets where a fault was reported but no corrective activity was recorded in the same work order?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0880", "gold-0083", "gold-0011", "gold-0044", "gold-0082", "gold-0314", "gold-0036", "gold-0864"]
+    },
+    {
+      "id": "q-021",
+      "text": "Which corrective activities are most commonly paired with reported faults?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0451", "gold-0443", "gold-0364", "gold-0201", "gold-0688", "gold-0430", "gold-0275", "gold-0243"]
+    },
+    {
+      "id": "q-022",
+      "text": "Which components are changed out most often across the fleet?",
+      "stratum": "multi_hop",
+      "gold_evidence": ["gold-0555", "gold-0418", "gold-0556", "gold-0594", "gold-0595", "gold-0574", "gold-0596", "gold-0575"]
+    },
+    {
+      "id": "q-023",
+      "text": "How much did the tail pulley replacement cost?",
+      "stratum": "unanswerable",
+      "gold_evidence": []
+    },
+    {
+      "id": "q-024",
+      "text": "Which supplier provided the replacement bearing?",
+      "stratum": "unanswerable",
+      "gold_evidence": []
+    },
+    {
+      "id": "q-025",
+      "text": "On what date was the most recent pulley inspection carried out?",
+      "stratum": "unanswerable",
+      "gold_evidence": []
+    }
+  ]
+}

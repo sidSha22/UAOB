@@ -2,3 +2,4 @@
 __pycache__/
 *.pyc
 maintie/
+retrieval/bm25_index/

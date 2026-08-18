@@ -1,0 +1,218 @@
+{
+  "_README": "GROUNDED. Evidence populated from live execution of each question's _verify query against Neo4j on 2026-08-19. _verify is kept so you can re-check. status: GROUNDED (evidence supports the question as-is), EMPTY (verify returned 0 rows), MISMATCH (returned records don't support the question as worded -- see _mismatch_note), or PLACEHOLDER_PENDING_TASK3 (q-009..q-012, q-021, q-022 -- candidate material for these is in the Task 3 report, not in this file; text/gold_evidence left untouched). This is NOT questions.json -- do not use as final without your review.",
+  "questions": [
+    {
+      "id": "q-001",
+      "text": "What maintenance action was recorded for the tail pulley?",
+      "stratum": "single_hop",
+      "status": "MISMATCH",
+      "_mismatch_note": "Only 1 row returned and it's an observed defect, not a recorded action: gold-0391 = '<id> tail pulley has no grease lines'. No maintenance action is stated.",
+      "gold_evidence": ["gold-0391"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'tail pulley' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-002",
+      "text": "What was done to the bend pulley?",
+      "stratum": "single_hop",
+      "status": "MISMATCH",
+      "_mismatch_note": "Only 1 row returned and it states no action: gold-0056 = '<id> bend pulley number <num>' -- just an identifier, no verb/action.",
+      "gold_evidence": ["gold-0056"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'bend pulley' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-003",
+      "text": "What problem was reported with the air conditioner?",
+      "stratum": "single_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0000", "gold-0001", "gold-0002", "gold-0003", "gold-0004", "gold-0052", "gold-0064", "gold-0065"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'air conditioner' OR toLower(w.text) CONTAINS 'aircon' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-004",
+      "text": "What work was recorded on the horn?",
+      "stratum": "single_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0008", "gold-0009", "gold-0010", "gold-0011", "gold-0012", "gold-0013", "gold-0014", "gold-0015"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'horn' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-005",
+      "text": "What damage was reported to the cabin door?",
+      "stratum": "single_hop",
+      "status": "GROUNDED",
+      "_note": "Query OR's in bare 'door' and returns 10 rows, but only 1 literally says 'cabin door': gold-0109 = 'cabin door window cracked'. The other 9 (driver's door, rear door, auto-greaser door, door frame, low-voltage door) are not the cabin door and were excluded from gold_evidence as not textually relevant to the question as worded.",
+      "gold_evidence": ["gold-0109"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'cabin door' OR toLower(w.text) CONTAINS 'door' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-006",
+      "text": "What was the reported fault with the brake?",
+      "stratum": "single_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0066", "gold-0092", "gold-0093", "gold-0094", "gold-0095", "gold-0096", "gold-0134", "gold-0181"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'brake' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-007",
+      "text": "What maintenance was carried out on the hydraulic hose?",
+      "stratum": "single_hop",
+      "status": "MISMATCH",
+      "_mismatch_note": "verify matches any 'hose', not 'hydraulic hose'. None of the 10 returned rows say 'hydraulic hose' -- e.g. gold-0064 'blown air conditioner hose' (refrigerant line, not hydraulic) and gold-0066 'blown brake hose' (pneumatic/brake circuit, not hydraulic). Some returned rows (crowd cylinder hose, boom hose, bucket cylinder hose, steering hose) are plausibly hydraulic given the equipment, but the text doesn't literally confirm it, so none were added to gold_evidence. A tighter verify (toLower(w.text) CONTAINS 'hydraulic hose') finds exactly 2 gold records: gold-0152 and gold-0447 -- not part of this query's results, so not added here per the 'only use IDs the query actually returned' rule. Recommend re-verifying with the tighter phrase if you want to keep this question.",
+      "gold_evidence": [],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'hose' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-008",
+      "text": "What work was recorded on the bucket?",
+      "stratum": "single_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0078", "gold-0084", "gold-0087", "gold-0108", "gold-0177", "gold-0279", "gold-0315", "gold-0324"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'bucket' RETURN w.id, w.text LIMIT 10"
+    },
+    {
+      "id": "q-009",
+      "text": "PLACEHOLDER — replace with a question about a leak you find in the data",
+      "stratum": "single_hop",
+      "status": "PLACEHOLDER_PENDING_TASK3",
+      "gold_evidence": [],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'leak' RETURN w.id, w.text LIMIT 15"
+    },
+    {
+      "id": "q-010",
+      "text": "PLACEHOLDER — replace with a question about a bearing fault you find in the data",
+      "stratum": "single_hop",
+      "status": "PLACEHOLDER_PENDING_TASK3",
+      "gold_evidence": [],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w.text) CONTAINS 'bearing' RETURN w.id, w.text LIMIT 15"
+    },
+    {
+      "id": "q-011",
+      "text": "PLACEHOLDER — pick any record with a clear symptom and write a question for it",
+      "stratum": "single_hop",
+      "status": "PLACEHOLDER_PENDING_TASK3",
+      "gold_evidence": [],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) RETURN w.id, w.text ORDER BY rand() LIMIT 20"
+    },
+    {
+      "id": "q-012",
+      "text": "PLACEHOLDER — pick any record with a clear repair action and write a question for it",
+      "stratum": "single_hop",
+      "status": "PLACEHOLDER_PENDING_TASK3",
+      "gold_evidence": [],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'}) RETURN w.id, w.text ORDER BY rand() LIMIT 20"
+    },
+
+    {
+      "id": "q-013",
+      "text": "Which maintenance activities are most frequently performed on pulleys across the fleet?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "_note": "5 rows returned, small counts (max n=3). Some evidence IDs repeat within a row because a work order mentions more than one 'pulley'-containing Asset (e.g. both 'pulley' and 'tail pulley'), inflating the aggregate count for that row -- flagging so wording/interpretation accounts for it.",
+      "gold_evidence": ["gold-0563", "gold-0573", "gold-0207", "gold-0319", "gold-0759"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(a:Asset) WHERE a.id CONTAINS 'pulley' MATCH (w)-[:MENTIONS]->(act:Activity) RETURN act.id, count(*) AS n, collect(w.id)[..8] AS evidence ORDER BY n DESC LIMIT 10"
+    },
+    {
+      "id": "q-014",
+      "text": "Which assets have both a replacement and a repair recorded against them?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "_note": "Using the clearest single example asset (bucket) as evidence for the pattern; 9 other qualifying assets were also returned (engine, cover, exhaust, cooler, oil, auto-greaser, motor, steering, torque converter).",
+      "gold_evidence": ["gold-0324", "gold-0315", "gold-0713", "gold-0701", "gold-0084", "gold-0087", "gold-0279", "gold-0528"],
+      "_verify": "MATCH (w1:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(a:Asset)<-[:MENTIONS]-(w2:WorkOrder {annotation_quality:'gold'}) WHERE toLower(w1.text) CONTAINS 'replace' AND toLower(w2.text) CONTAINS 'repair' RETURN a.id, collect(DISTINCT w1.id)[..4] AS repl, collect(DISTINCT w2.id)[..4] AS rep LIMIT 10"
+    },
+    {
+      "id": "q-015",
+      "text": "Which assets appear most often in the maintenance record?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0064", "gold-0065", "gold-0066", "gold-0067", "gold-0069", "gold-0070", "gold-0037", "gold-0085"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(a:Asset) RETURN a.id, count(w) AS n, collect(w.id)[..6] AS evidence ORDER BY n DESC LIMIT 20"
+    },
+    {
+      "id": "q-016",
+      "text": "What states or faults are most commonly reported alongside pulleys?",
+      "stratum": "multi_hop",
+      "status": "MISMATCH",
+      "_mismatch_note": "Only 1 row returned: s.id='no', n=2, both instances from the same record gold-0391 ('tail pulley has no grease lines'). The extracted State entity is the stray word 'no', not an interpretable fault/state -- an NER artifact, not a meaningful answer to 'what states/faults'.",
+      "gold_evidence": ["gold-0391"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(a:Asset) WHERE a.id CONTAINS 'pulley' MATCH (w)-[:MENTIONS]->(s:State) RETURN s.id, count(*) AS n, collect(w.id)[..6] AS evidence ORDER BY n DESC LIMIT 10"
+    },
+    {
+      "id": "q-017",
+      "text": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "_note": "Query has no annotation_quality filter, so gold_evidence legitimately includes silver source_record_ids -- that's what the verify query returns. All 20 returned rows happen to be under 'air conditioner' (parent asset) within the LIMIT 20 window; other parent assets exist further down (see Task 3 Pattern B for a broader view).",
+      "gold_evidence": ["gold-1002", "silver-6937", "silver-6744", "silver-6975", "silver-6910", "silver-6437", "silver-6810", "silver-6656"],
+      "_verify": "MATCH (a:Asset)-[r:HAS_PART]->(b:Asset) RETURN a.id, b.id, r.source_record_id LIMIT 20"
+    },
+    {
+      "id": "q-018",
+      "text": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0520", "gold-0796", "gold-0003", "gold-0001", "gold-0052", "gold-0801", "gold-0002", "gold-0011"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(a:Asset), (w)-[:MENTIONS]->(s:State) WITH a, s, collect(w.id) AS wos WHERE size(wos) > 1 RETURN a.id, s.id, wos LIMIT 15"
+    },
+    {
+      "id": "q-019",
+      "text": "Which activities are applied across the widest range of different assets?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0293", "gold-0975", "gold-0777", "gold-1005", "gold-0818", "gold-1011", "gold-0147", "gold-0776"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(act:Activity), (w)-[:MENTIONS]->(a:Asset) WITH act, count(DISTINCT a) AS breadth, collect(DISTINCT w.id)[..6] AS evidence RETURN act.id, breadth, evidence ORDER BY breadth DESC LIMIT 10"
+    },
+    {
+      "id": "q-020",
+      "text": "Are there assets where a fault was reported but no corrective activity was recorded in the same work order?",
+      "stratum": "multi_hop",
+      "status": "GROUNDED",
+      "gold_evidence": ["gold-0880", "gold-0083", "gold-0011", "gold-0044", "gold-0082", "gold-0314", "gold-0036", "gold-0864"],
+      "_verify": "MATCH (w:WorkOrder {annotation_quality:'gold'})-[:MENTIONS]->(s:State) WHERE NOT (w)-[:MENTIONS]->(:Activity) MATCH (w)-[:MENTIONS]->(a:Asset) RETURN w.id, w.text, a.id, s.id LIMIT 15"
+    },
+    {
+      "id": "q-021",
+      "text": "PLACEHOLDER — write one multi-hop question from a pattern you notice while running the queries above",
+      "stratum": "multi_hop",
+      "status": "PLACEHOLDER_PENDING_TASK3",
+      "gold_evidence": [],
+      "_verify": ""
+    },
+    {
+      "id": "q-022",
+      "text": "PLACEHOLDER — write one more multi-hop question of your own",
+      "stratum": "multi_hop",
+      "status": "PLACEHOLDER_PENDING_TASK3",
+      "gold_evidence": [],
+      "_verify": ""
+    },
+
+    {
+      "id": "q-023",
+      "text": "How much did the tail pulley replacement cost?",
+      "stratum": "unanswerable",
+      "status": "FLAGGED_NOT_EMPTY",
+      "_structural_absence_check": "5 WorkOrders match cost/price/'$' terms (not 0 as assumed). None contain an actual price value -- see Task 2 report for the records and why the question is still likely safe.",
+      "gold_evidence": [],
+      "_verify": "STRUCTURALLY ABSENT — the corpus has no cost field. Confirm with: MATCH (w:WorkOrder) WHERE toLower(w.text) CONTAINS '$' OR toLower(w.text) CONTAINS 'cost' RETURN count(w)"
+    },
+    {
+      "id": "q-024",
+      "text": "Which supplier provided the replacement bearing?",
+      "stratum": "unanswerable",
+      "status": "CONFIRMED_ABSENT",
+      "_structural_absence_check": "0 WorkOrders match supplier/vendor/manufacturer terms. Confirmed safely unanswerable.",
+      "gold_evidence": [],
+      "_verify": "STRUCTURALLY ABSENT — no supplier or vendor data in the corpus."
+    },
+    {
+      "id": "q-025",
+      "text": "On what date was the most recent pulley inspection carried out?",
+      "stratum": "unanswerable",
+      "status": "CONFIRMED_ABSENT",
+      "_structural_absence_check": "0 WorkOrders have date IS NOT NULL (the WorkOrder.date property is unset on every node in the graph). Confirmed safely unanswerable.",
+      "gold_evidence": [],
+      "_verify": "STRUCTURALLY ABSENT — dates are masked as <date> tokens and the date field is null on every WorkOrder. Confirm with: MATCH (w:WorkOrder) WHERE w.date IS NOT NULL RETURN count(w)"
+    }
+  ]
+}
