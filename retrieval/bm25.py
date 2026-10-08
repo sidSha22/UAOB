@@ -59,10 +59,12 @@ def get_retriever():
     if _retriever is not None:
         return _retriever
 
-    if INDEX_DIR.exists():
-        _retriever = bm25s.BM25.load(str(INDEX_DIR), load_corpus=True)
-    else:
-        _retriever = build_index()
+    if not INDEX_DIR.exists():
+        build_index()
+    # Always load from disk: the in-memory retriever returned by index()
+    # has no corpus attached, so retrieve() would return bare integer ids
+    # instead of the per-chunk metadata dicts search() expects.
+    _retriever = bm25s.BM25.load(str(INDEX_DIR), load_corpus=True)
     return _retriever
 
 
