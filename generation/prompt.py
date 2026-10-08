@@ -6,7 +6,7 @@ strings, so they can be versioned independently of this logic."""
 from pathlib import Path
 
 PROMPTS_DIR = Path(__file__).resolve().parent / "prompts"
-PROMPT_VERSION = "v1"
+PROMPT_VERSION = "v2"  # v2 adds the [graph] evidence type; v1 kept for reproducibility
 
 SYSTEM_PROMPT = (PROMPTS_DIR / f"system_{PROMPT_VERSION}.txt").read_text(encoding="utf-8")
 USER_TEMPLATE = (PROMPTS_DIR / f"user_{PROMPT_VERSION}.txt").read_text(encoding="utf-8")
@@ -27,6 +27,10 @@ def build_evidence_map(chunks):
             "source_id": c["source_id"],
             "text": c["text"],
             "score": c["score"],
+            # optional provenance, passed through for the UI / API
+            "annotation_quality": c.get("annotation_quality"),
+            "graph_path": c.get("graph_path"),
+            "fused_from": c.get("fused_from"),
         }
     return evidence_map
 

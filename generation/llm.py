@@ -65,3 +65,27 @@ def chat(messages, temperature=0.0, max_tokens=DEFAULT_MAX_TOKENS):
         return data["choices"][0]["message"]["content"]
     except (KeyError, IndexError) as exc:
         raise RuntimeError(f"Unexpected LLM response shape from {base_url}: {data}") from exc
+
+
+def status(timeout=3):
+    """Non-raising health probe for the UI/API: is an LLM configured, and
+    does its OpenAI-compatible server answer GET /models? Returns
+    {configured, reachable, base_url, model, detail}."""
+    base_url = os.environ.get("LLM_BASE_URL")
+    model = os.environ.get("LLM_MODEL")
+    out = {"configured": bool(base_url and model), "reachable": False,
+           "base_url": base_url, "model": model, "detail": ""}
+    if not out["configured"]:
+        out["detail"] = "LLM_BASE_URL / LLM_MODEL not set in .env"
+        return out
+    headers = {}
+    api_key = os.environ.get("LLM_API_KEY")
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+    try:
+        resp = requests.get(f"{base_url.rstrip('/')}/models", headers=headers, timeout=timeout)
+        out["reachable"] = resp.status_code < 500
+        out["detail"] = f"HTTP {resp.status_code}"
+    except requests.exceptions.RequestException as exc:
+        out["detail"] = f"unreachable: {type(exc).__name__}"
+    return out

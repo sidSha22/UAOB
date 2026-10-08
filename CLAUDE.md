@@ -47,7 +47,10 @@ it and must be set up on this machine.
 - You have write access, so protect `master`: work on a branch, never
   force-push, and open a pull request or ask the owner before merging.
 
-## Not built yet
+## Current state
 
-Reciprocal-rank fusion and graph-based retrieval. `POST /query` uses exactly one
-of BM25 or dense per request.
+Graph retrieval (`retrieval/graph_search.py`), RRF fusion (`retrieval/fusion.py`)
+and a single retrieval entry point (`retrieval/router.py`, modes `hybrid`,
+`bm25`, `dense`, `graph`) are built and used by the API, the Streamlit app and
+the eval harness. See CONTEXT.md "Where the project stands" for what is still
+not built.
