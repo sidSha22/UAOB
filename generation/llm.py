@@ -16,10 +16,14 @@ DEFAULT_TIMEOUT = 180
 DEFAULT_MAX_TOKENS = 1536
 
 
+# The value shipped in .env.example; treated as "no LLM configured yet".
+PLACEHOLDER_MODELS = {"your-model-name"}
+
+
 def _config():
     base_url = os.environ.get("LLM_BASE_URL")
     model = os.environ.get("LLM_MODEL")
-    if not base_url or not model:
+    if not base_url or not model or model in PLACEHOLDER_MODELS:
         raise RuntimeError(
             "Missing LLM_BASE_URL or LLM_MODEL environment variable(s). "
             "Set them in the environment or in a .env file (see .env.example)."
@@ -73,7 +77,8 @@ def status(timeout=3):
     {configured, reachable, base_url, model, detail}."""
     base_url = os.environ.get("LLM_BASE_URL")
     model = os.environ.get("LLM_MODEL")
-    out = {"configured": bool(base_url and model), "reachable": False,
+    configured = bool(base_url and model) and model not in PLACEHOLDER_MODELS
+    out = {"configured": configured, "reachable": False,
            "base_url": base_url, "model": model, "detail": ""}
     if not out["configured"]:
         out["detail"] = "LLM_BASE_URL / LLM_MODEL not set in .env"
