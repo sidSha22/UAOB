@@ -70,4 +70,22 @@ Edges (domain → range): `INSTANCE_OF (Asset→AssetClass)` · `SUBCLASS_OF (As
 
 Conformance checks (CI): no orphan `State`/`Activity`; every `Chunk` has `FROM`; every `FailureMode.code` ∈ the condensed ISO 14224 set; every synthetic node flagged; `REFERENCES` only to sections whose `APPLIES_TO` class is an ancestor-or-self of the work order's asset class (G3 sanity).
 
+## Startup: reproducing the working environment from a fresh clone
+
+The repo holds **code, prompts, the three manual PDFs, the question sets and eval results only**. It does NOT contain the corpus, the database contents, the embedding model, any LLM, or any secrets. Each of those is provisioned locally, in this order. Do not skip ahead: later steps assume earlier ones succeeded.
+
+1. **Tooling.** Docker Desktop (running), Python 3.11+, git. If the machine has more than one Python, always use `python -m pip install ...`, never bare `pip` (it can install into a different interpreter than `python` runs).
+2. **Corpus (not in repo).** From the repo root: `git clone https://github.com/nlp-tlp/maintie maintie`. It is MIT-licensed and git-ignored here. `ingest/load_maintie.py` reads `maintie/data/gold_release.json` and `silver_release.json` (1,076 + 7,000 records).
+3. **Config.** `cp .env.example .env`, then set `NEO4J_PASSWORD` (any 8+ character value; `docker compose` and the Python code both read it from `.env`). `.env` is never committed.
+4. **Python deps.** `python -m pip install -r graph/requirements.txt`. This pulls `sentence-transformers` (and PyTorch), so expect a large first download.
+5. **Neo4j.** `docker compose up -d`, wait about 30 seconds for boot, then `python graph/smoke_test.py`. It also applies the schema (uniqueness constraints and the 384-d cosine vector index on `Chunk.embedding`) and must end with `13/13 checks passed`. Data lives in a Docker named volume, so it survives restarts but is not in git.
+6. **Build the graph, in this order** (all resumable and safe to re-run):
+   `python ingest/load_maintie.py`, then `python ingest/chunk_work_orders.py`, then `python ingest/chunk_manuals.py` (reads `manuals/*.pdf`, which are in the repo), then `python ingest/embed_chunks.py`. The first embedding run downloads `BAAI/bge-small-en-v1.5` from Hugging Face. Sanity check after step one: 8,076 `WorkOrder`, 2,572 `Asset`, 434 `State`, 423 `Activity`, 128 `Process`, 34 `Property` nodes, 24,455 `MENTIONS` edges and 16,215 entity-relation edges.
+7. **Local LLM (not in repo, install it yourself).** Generation (`generation/`, `api/`) talks to any OpenAI-compatible chat endpoint through `LLM_BASE_URL` and `LLM_MODEL` in `.env`; the code stays untouched whichever server you use. The original author runs llama.cpp's `llama-server` on port 8080 with a Gemma 12B instruct GGUF (Q4 quantization), so `LLM_BASE_URL=http://localhost:8080/v1`. Install llama.cpp, download a GGUF model you are licensed to use, start `llama-server`, and put your own model identifier in `LLM_MODEL`. `LLM_API_KEY` is only needed for hosted providers. Retrieval, the UI and the eval harness work without any LLM; only `POST /query` needs one.
+8. **Run.** UI: `python -m streamlit run ui/app.py`. API: `python -m uvicorn api.main:app --reload`, then `POST /query`. Eval: `python eval/harness.py`, which writes a timestamped `artifacts/eval_*.json`. The BM25 index is built on first search into `retrieval/bm25_index/` (git-ignored).
+
+**Where the project stands:** MaintIE ingestion, work-order and manual chunking, embeddings, BM25 and dense retrieval, a retrieval eval harness (question sets in `questions/`), citation-enforced generation, a query API and a Streamlit inspector are built. Reciprocal-rank fusion and graph-based retrieval are NOT built yet; `/query` uses exactly one of BM25 or dense per request.
+
+**Working rules for any Claude Code session:** read this file first; verify version-sensitive APIs (Neo4j syntax especially) against real docs, not memory; build one module at a time and verify each step before the next.
+
 # Do not add dependencies, services, or datastores not listed here. If deemed extremely important, mission-critical, or a straight-up better option, then flag and ask. 

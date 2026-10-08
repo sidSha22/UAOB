@@ -2,7 +2,9 @@
 
 Maintenance-knowledge RAG over the MaintIE work-order corpus plus equipment
 manuals, backed by a single Neo4j instance (graph + vector index). Read
-[CONTEXT.md](CONTEXT.md) first: it holds the frozen tech stack and graph schema.
+[CONTEXT.md](CONTEXT.md) first: it holds the frozen tech stack and graph schema,
+and its "Startup" section is the authoritative step-by-step for reproducing the
+full environment from a fresh clone (corpus, database, embeddings, local LLM).
 
 Status: ingestion, BM25 and dense retrieval, citation-enforced generation, an
 API, a Streamlit inspector and a retrieval eval harness exist. Fusion and graph
@@ -38,6 +40,13 @@ python ingest/chunk_work_orders.py  # one chunk per work order
 python ingest/chunk_manuals.py      # PDFs in manuals/ -> sections -> chunks
 python ingest/embed_chunks.py       # bge-small-en-v1.5 embeddings (resumable)
 ```
+
+## Local LLM (only needed for the API's `/query`)
+
+Not included. Install llama.cpp (or any OpenAI-compatible server), download a
+GGUF model you are licensed to use, start the server, and point `LLM_BASE_URL`
+and `LLM_MODEL` in `.env` at it. Retrieval, the UI and the eval harness run
+without it.
 
 ## Run
 
