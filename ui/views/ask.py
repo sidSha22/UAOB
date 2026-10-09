@@ -70,6 +70,17 @@ def render():
                            "(python ingest/embed_chunks.py). Hybrid mode keeps working without it.")
             return
 
+    gate = out.get("gate") or {}
+    if gate.get("decision") == "refuse":
+        theme.note(
+            "<b>Safety gate: no instructions given.</b> This reads as a procedural question, and the manuals "
+            f"don't contain a reliable enough match ({esc(gate.get('reason', ''))}). Use the manual and your "
+            "site's isolation / lockout-tagout procedure.", bad=True)
+    elif gate.get("decision") == "answer_with_warning":
+        theme.note(
+            "<b>Safety-critical procedure.</b> The answer below rests on manual evidence only. Verify it against "
+            "the current manual and your site's lockout-tagout procedure before starting work.")
+
     if out["generation_error"]:
         data.ask.clear()  # don't cache a transient LLM outage
         theme.note(

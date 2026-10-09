@@ -4,7 +4,7 @@ Endpoints
   GET  /health          Neo4j, LLM and BM25-index status (never raises)
   GET  /stats           node / edge counts from Neo4j
   POST /search          retrieval only (no LLM needed)
-  POST /query           retrieval + citation-enforced generation
+  POST /query           safety gate + retrieval + citation-enforced generation
   GET  /assets?q=...    entity search over Asset nodes
   GET  /assets/{id}     asset health profile from the knowledge graph
 
@@ -71,6 +71,7 @@ class QueryResponse(BaseModel):
     retrieval_scores: list[dict]
     enforcement: Enforcement
     graph_plan: Optional[str] = None
+    gate: Optional[dict] = None
     retrieval_warnings: dict = {}
     timings_ms: dict = {}
 
@@ -164,6 +165,7 @@ def query(req: QueryRequest):
         retrieval_scores=retrieval_scores,
         enforcement=Enforcement(retried=out["retried"], dropped_sentences=out["dropped_sentences"]),
         graph_plan=out["retrieval"]["graph_plan"],
+        gate=out["gate"],
         retrieval_warnings=out["retrieval"]["errors"],
         timings_ms={**out["retrieval"]["timings_ms"], **out["timings_ms"]},
     )
