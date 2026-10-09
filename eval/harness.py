@@ -25,6 +25,7 @@ import argparse
 import json
 import math
 import sys
+import time
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -142,6 +143,28 @@ def aggregate(rows):
     return agg
 
 
+def percentile(values, p):
+    """Nearest-rank percentile (never an interpolated, never-observed value)."""
+    ordered = sorted(values)
+    return ordered[max(0, math.ceil(p / 100 * len(ordered)) - 1)]
+
+
+def summarize_latency(latencies_ms):
+    return {
+        "n": len(latencies_ms),
+        "p50_ms": round(percentile(latencies_ms, 50), 1),
+        "p95_ms": round(percentile(latencies_ms, 95), 1),
+        "mean_ms": round(sum(latencies_ms) / len(latencies_ms), 1),
+    }
+
+
+def print_latency_table(latency_by_mode):
+    print("\nWarm end-to-end retrieval latency per query (one warm-up query excluded)")
+    print(f"{'mode':<10}{'n':>4}{'p50 ms':>12}{'p95 ms':>12}{'mean ms':>12}")
+    for mode, lat in latency_by_mode.items():
+        print(f"{mode:<10}{lat['n']:>4}{lat['p50_ms']:>12}{lat['p95_ms']:>12}{lat['mean_ms']:>12}")
+
+
 def fmt(x, pct=False, decimals=3):
     if x is None:
         return "n/a"
@@ -185,12 +208,19 @@ def main():
 
     rows_by_mode = {}
     agg_by_mode = {}
+    latency_by_mode = {}
     errors = {}
     for mode in args.modes:
         try:
             rows = []
+            latencies = []
+            # warm-up: loading the embedding model / graph index / BM25 index is a
+            # one-off start-up cost, not per-query latency
+            router.search_detailed(questions[0]["text"], mode=mode, k=K)
             for q in questions:
+                t0 = time.perf_counter()
                 out = router.search_detailed(q["text"], mode=mode, k=K)
+                latencies.append((time.perf_counter() - t0) * 1000)
                 for name, msg in out["errors"].items():
                     errors.setdefault(f"{mode}/{name}", msg)
                 rows.append(score_question(q, out["results"], K))
@@ -200,6 +230,7 @@ def main():
             continue
         rows_by_mode[mode] = rows
         agg_by_mode[mode] = aggregate(rows)
+        latency_by_mode[mode] = summarize_latency(latencies)
 
     if not agg_by_mode:
         print("No retrieval mode could be evaluated.")
@@ -214,6 +245,7 @@ def main():
     print_metric_table("Hit rate (>=1 gold in top-10)", agg_by_mode, "hit_rate", pct=True)
     print_metric_table("Mean rank of first hit", agg_by_mode, "mean_rank_of_first_hit")
     print_unanswerable_table(agg_by_mode)
+    print_latency_table(latency_by_mode)
     print_failures(rows_by_mode)
 
     ARTIFACTS_DIR.mkdir(exist_ok=True)
@@ -227,6 +259,7 @@ def main():
             "modes": list(agg_by_mode),
             "errors": errors,
             "aggregate": agg_by_mode,
+            "latency": latency_by_mode,
             "per_question": rows_by_mode,
         }, f, indent=2)
 

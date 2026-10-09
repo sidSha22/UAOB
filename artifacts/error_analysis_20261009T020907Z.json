@@ -1,0 +1,91 @@
+{
+  "source": "eval_20261009T015501Z.json",
+  "k": 10,
+  "depth": 30,
+  "failures": [
+    {
+      "mode": "hybrid",
+      "id": "q-001",
+      "stratum": "single_hop",
+      "question": "What was reported about the tail pulley?",
+      "n_gold": 1,
+      "graph_plan": "lookup",
+      "best_gold_rank_by_component": {
+        "bm25": 26,
+        "dense": null,
+        "graph": 2
+      },
+      "category": "fusion_dilution"
+    },
+    {
+      "mode": "hybrid",
+      "id": "q-008",
+      "stratum": "single_hop",
+      "question": "What work was recorded on the bucket?",
+      "n_gold": 8,
+      "graph_plan": "lookup",
+      "best_gold_rank_by_component": {
+        "bm25": null,
+        "dense": null,
+        "graph": 4
+      },
+      "category": "fusion_dilution"
+    },
+    {
+      "mode": "hybrid",
+      "id": "q-017",
+      "stratum": "multi_hop",
+      "question": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+      "n_gold": 8,
+      "graph_plan": "part_of",
+      "best_gold_rank_by_component": {
+        "bm25": null,
+        "dense": null,
+        "graph": 20
+      },
+      "category": "below_cutoff"
+    },
+    {
+      "mode": "hybrid",
+      "id": "q-018",
+      "stratum": "multi_hop",
+      "question": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+      "n_gold": 8,
+      "graph_plan": "recurrence",
+      "best_gold_rank_by_component": {
+        "bm25": null,
+        "dense": null,
+        "graph": 18
+      },
+      "category": "below_cutoff"
+    },
+    {
+      "mode": "hybrid",
+      "id": "q-019",
+      "stratum": "multi_hop",
+      "question": "Which activities are applied across the widest range of different assets?",
+      "n_gold": 8,
+      "graph_plan": "rank",
+      "best_gold_rank_by_component": {
+        "bm25": null,
+        "dense": null,
+        "graph": null
+      },
+      "category": "gold_unreachable"
+    },
+    {
+      "mode": "graph",
+      "id": "q-019",
+      "stratum": "multi_hop",
+      "question": "Which activities are applied across the widest range of different assets?",
+      "n_gold": 8,
+      "graph_plan": "rank",
+      "best_gold_rank_by_component": {
+        "bm25": null,
+        "dense": null,
+        "graph": null
+      },
+      "category": "gold_unreachable"
+    }
+  ]
+}

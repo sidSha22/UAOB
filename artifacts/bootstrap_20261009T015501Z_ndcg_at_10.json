@@ -1,0 +1,158 @@
+{
+  "source": "eval_20261009T015501Z.json",
+  "metric": "ndcg_at_10",
+  "resamples": 10000,
+  "seed": 1234,
+  "results": [
+    {
+      "a": "hybrid",
+      "b": "dense",
+      "stratum": "single_hop",
+      "n": 12,
+      "mean_diff": 0.393073769526437,
+      "ci_low": 0.20982072775392668,
+      "ci_high": 0.584623936370331,
+      "includes_zero": false
+    },
+    {
+      "a": "hybrid",
+      "b": "dense",
+      "stratum": "multi_hop",
+      "n": 9,
+      "mean_diff": 0.15797073745247464,
+      "ci_low": 0.04094816307002976,
+      "ci_high": 0.3316375206618906,
+      "includes_zero": false
+    },
+    {
+      "a": "hybrid",
+      "b": "dense",
+      "stratum": "overall",
+      "n": 21,
+      "mean_diff": 0.29231532720902453,
+      "ci_low": 0.1625673397418346,
+      "ci_high": 0.43656365868851427,
+      "includes_zero": false
+    },
+    {
+      "a": "hybrid",
+      "b": "bm25",
+      "stratum": "single_hop",
+      "n": 12,
+      "mean_diff": 0.17913968797953483,
+      "ci_low": 0.0776926941352578,
+      "ci_high": 0.2895503763037019,
+      "includes_zero": false
+    },
+    {
+      "a": "hybrid",
+      "b": "bm25",
+      "stratum": "multi_hop",
+      "n": 9,
+      "mean_diff": 0.17496089045318108,
+      "ci_low": 0.05349397021486488,
+      "ci_high": 0.3531080832785457,
+      "includes_zero": false
+    },
+    {
+      "a": "hybrid",
+      "b": "bm25",
+      "stratum": "overall",
+      "n": 21,
+      "mean_diff": 0.17734877475395466,
+      "ci_low": 0.09312043244396213,
+      "ci_high": 0.27217775405737893,
+      "includes_zero": false
+    },
+    {
+      "a": "graph",
+      "b": "dense",
+      "stratum": "single_hop",
+      "n": 12,
+      "mean_diff": 0.27232332994894803,
+      "ci_low": 0.09434091573493443,
+      "ci_high": 0.4400635309499279,
+      "includes_zero": false
+    },
+    {
+      "a": "graph",
+      "b": "dense",
+      "stratum": "multi_hop",
+      "n": 9,
+      "mean_diff": 0.16266518270963512,
+      "ci_low": 0.05778272682257371,
+      "ci_high": 0.3305259290926787,
+      "includes_zero": false
+    },
+    {
+      "a": "graph",
+      "b": "dense",
+      "stratum": "overall",
+      "n": 21,
+      "mean_diff": 0.22532698113209962,
+      "ci_low": 0.11047869747717076,
+      "ci_high": 0.3494336675084579,
+      "includes_zero": false
+    },
+    {
+      "a": "graph",
+      "b": "bm25",
+      "stratum": "single_hop",
+      "n": 12,
+      "mean_diff": 0.058389248402045846,
+      "ci_low": -0.1258234451630922,
+      "ci_high": 0.2380023017145326,
+      "includes_zero": true
+    },
+    {
+      "a": "graph",
+      "b": "bm25",
+      "stratum": "multi_hop",
+      "n": 9,
+      "mean_diff": 0.17965533571034156,
+      "ci_low": 0.07436719117382855,
+      "ci_high": 0.34448951974248687,
+      "includes_zero": false
+    },
+    {
+      "a": "graph",
+      "b": "bm25",
+      "stratum": "overall",
+      "n": 21,
+      "mean_diff": 0.11036042867702972,
+      "ci_low": -0.011071493306908655,
+      "ci_high": 0.23081181010564844,
+      "includes_zero": true
+    },
+    {
+      "a": "hybrid",
+      "b": "graph",
+      "stratum": "single_hop",
+      "n": 12,
+      "mean_diff": 0.12075043957748897,
+      "ci_low": -0.0808374431032027,
+      "ci_high": 0.2971424303494832,
+      "includes_zero": true
+    },
+    {
+      "a": "hybrid",
+      "b": "graph",
+      "stratum": "multi_hop",
+      "n": 9,
+      "mean_diff": -0.0046944452571604685,
+      "ci_low": -0.05242430626716973,
+      "ci_high": 0.03540318987096281,
+      "includes_zero": true
+    },
+    {
+      "a": "hybrid",
+      "b": "graph",
+      "stratum": "overall",
+      "n": 21,
+      "mean_diff": 0.06698834607692492,
+      "ci_low": -0.05180216314887581,
+      "ci_high": 0.17712073206576542,
+      "includes_zero": true
+    }
+  ]
+}
