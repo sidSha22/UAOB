@@ -1,0 +1,6385 @@
+{
+  "timestamp": "20261009T013935Z",
+  "k": 10,
+  "n_questions": 24,
+  "modes": [
+    "bm25",
+    "dense",
+    "graph",
+    "hybrid"
+  ],
+  "errors": {},
+  "aggregate": {
+    "bm25": {
+      "single_hop": {
+        "n_questions": 12,
+        "recall_at_10": 0.6145833333333334,
+        "ndcg_at_10": 0.4523801745591343,
+        "hit_rate": 0.75,
+        "mean_rank_of_first_hit": 2.7777777777777777
+      },
+      "multi_hop": {
+        "n_questions": 9,
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "hit_rate": 0.0,
+        "mean_rank_of_first_hit": null
+      },
+      "overall": {
+        "n_questions": 21,
+        "recall_at_10": 0.35119047619047616,
+        "ndcg_at_10": 0.2585029568909339,
+        "hit_rate": 0.42857142857142855,
+        "mean_rank_of_first_hit": 2.7777777777777777
+      },
+      "unanswerable": {
+        "n_questions": 3,
+        "mean_top1_score": 4.823995431264241,
+        "mean_top10_score": 3.627931833267212
+      }
+    },
+    "dense": {
+      "single_hop": {
+        "n_questions": 12,
+        "recall_at_10": 0.4166666666666667,
+        "ndcg_at_10": 0.23844609301223219,
+        "hit_rate": 0.4166666666666667,
+        "mean_rank_of_first_hit": 3.0
+      },
+      "multi_hop": {
+        "n_questions": 9,
+        "recall_at_10": 0.027777777777777776,
+        "ndcg_at_10": 0.01699015300070646,
+        "hit_rate": 0.2222222222222222,
+        "mean_rank_of_first_hit": 9.0
+      },
+      "overall": {
+        "n_questions": 21,
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.14353640443586402,
+        "hit_rate": 0.3333333333333333,
+        "mean_rank_of_first_hit": 4.714285714285714
+      },
+      "unanswerable": {
+        "n_questions": 3,
+        "mean_top1_score": 0.8989667892456055,
+        "mean_top10_score": 0.8826213518778484
+      }
+    },
+    "graph": {
+      "single_hop": {
+        "n_questions": 12,
+        "recall_at_10": 0.8125,
+        "ndcg_at_10": 0.5107694229611802,
+        "hit_rate": 1.0,
+        "mean_rank_of_first_hit": 2.5833333333333335
+      },
+      "multi_hop": {
+        "n_questions": 9,
+        "recall_at_10": 0.2361111111111111,
+        "ndcg_at_10": 0.17965533571034156,
+        "hit_rate": 0.8888888888888888,
+        "mean_rank_of_first_hit": 6.0
+      },
+      "overall": {
+        "n_questions": 21,
+        "recall_at_10": 0.5654761904761905,
+        "ndcg_at_10": 0.36886338556796366,
+        "hit_rate": 0.9523809523809523,
+        "mean_rank_of_first_hit": 3.95
+      },
+      "unanswerable": {
+        "n_questions": 3,
+        "mean_top1_score": 9.136955769990156,
+        "mean_top10_score": 7.846655305324449
+      }
+    },
+    "hybrid": {
+      "single_hop": {
+        "n_questions": 12,
+        "recall_at_10": 0.6666666666666666,
+        "ndcg_at_10": 0.6315198625386692,
+        "hit_rate": 0.8333333333333334,
+        "mean_rank_of_first_hit": 1.6
+      },
+      "multi_hop": {
+        "n_questions": 9,
+        "recall_at_10": 0.2222222222222222,
+        "ndcg_at_10": 0.17496089045318108,
+        "hit_rate": 0.6666666666666666,
+        "mean_rank_of_first_hit": 4.5
+      },
+      "overall": {
+        "n_questions": 21,
+        "recall_at_10": 0.47619047619047616,
+        "ndcg_at_10": 0.43585173164488855,
+        "hit_rate": 0.7619047619047619,
+        "mean_rank_of_first_hit": 2.6875
+      },
+      "unanswerable": {
+        "n_questions": 3,
+        "mean_top1_score": 0.057513641657379794,
+        "mean_top10_score": 0.04115096369938056
+      }
+    }
+  },
+  "per_question": {
+    "bm25": [
+      {
+        "id": "q-001",
+        "stratum": "single_hop",
+        "text": "What was reported about the tail pulley?",
+        "gold_evidence": [
+          "gold-0391"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 5.875239849090576
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 4.200242519378662
+          },
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 4.200242519378662
+          },
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 4.200242519378662
+          },
+          {
+            "chunk_id": "wochunk::silver-0222",
+            "source_id": "silver-0222",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-0951",
+            "source_id": "silver-0951",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-3126",
+            "source_id": "silver-3126",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-4540",
+            "source_id": "silver-4540",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-6705",
+            "source_id": "silver-6705",
+            "score": 3.822946786880493
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-002",
+        "stratum": "single_hop",
+        "text": "What was reported about the bend pulley?",
+        "gold_evidence": [
+          "gold-0056"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4268",
+            "source_id": "silver-4268",
+            "score": 5.109934329986572
+          },
+          {
+            "chunk_id": "wochunk::silver-6735",
+            "source_id": "silver-6735",
+            "score": 4.365928649902344
+          },
+          {
+            "chunk_id": "wochunk::silver-4424",
+            "source_id": "silver-4424",
+            "score": 4.00607442855835
+          },
+          {
+            "chunk_id": "wochunk::gold-0056",
+            "source_id": "gold-0056",
+            "score": 4.00607442855835
+          },
+          {
+            "chunk_id": "wochunk::silver-1315",
+            "source_id": "silver-1315",
+            "score": 4.00607442855835
+          },
+          {
+            "chunk_id": "wochunk::silver-4341",
+            "source_id": "silver-4341",
+            "score": 4.00607442855835
+          },
+          {
+            "chunk_id": "wochunk::silver-0726",
+            "source_id": "silver-0726",
+            "score": 3.701024055480957
+          },
+          {
+            "chunk_id": "wochunk::silver-6931",
+            "source_id": "silver-6931",
+            "score": 3.701024055480957
+          },
+          {
+            "chunk_id": "wochunk::silver-5551",
+            "source_id": "silver-5551",
+            "score": 3.701024055480957
+          },
+          {
+            "chunk_id": "wochunk::silver-2199",
+            "source_id": "silver-2199",
+            "score": 3.701024055480957
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.43067655807339306,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-003",
+        "stratum": "single_hop",
+        "text": "What problem was reported with the air conditioner?",
+        "gold_evidence": [
+          "gold-0000",
+          "gold-0001",
+          "gold-0002",
+          "gold-0003",
+          "gold-0004",
+          "gold-0052",
+          "gold-0064",
+          "gold-0065"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5660",
+            "source_id": "silver-5660",
+            "score": 5.552184104919434
+          },
+          {
+            "chunk_id": "wochunk::silver-3279",
+            "source_id": "silver-3279",
+            "score": 3.950819969177246
+          },
+          {
+            "chunk_id": "wochunk::silver-4122",
+            "source_id": "silver-4122",
+            "score": 3.7752060890197754
+          },
+          {
+            "chunk_id": "wochunk::silver-1411",
+            "source_id": "silver-1411",
+            "score": 3.2654619216918945
+          },
+          {
+            "chunk_id": "wochunk::silver-1656",
+            "source_id": "silver-1656",
+            "score": 3.2654619216918945
+          },
+          {
+            "chunk_id": "wochunk::silver-5385",
+            "source_id": "silver-5385",
+            "score": 3.2654619216918945
+          },
+          {
+            "chunk_id": "wochunk::silver-6577",
+            "source_id": "silver-6577",
+            "score": 3.2654619216918945
+          },
+          {
+            "chunk_id": "wochunk::silver-3373",
+            "source_id": "silver-3373",
+            "score": 3.2654619216918945
+          },
+          {
+            "chunk_id": "wochunk::silver-5635",
+            "source_id": "silver-5635",
+            "score": 3.2654619216918945
+          },
+          {
+            "chunk_id": "wochunk::silver-2895",
+            "source_id": "silver-2895",
+            "score": 3.2654619216918945
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-004",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the horn?",
+        "gold_evidence": [
+          "gold-0008",
+          "gold-0009",
+          "gold-0010",
+          "gold-0011",
+          "gold-0012",
+          "gold-0013",
+          "gold-0014",
+          "gold-0015"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0009",
+            "source_id": "gold-0009",
+            "score": 4.617004871368408
+          },
+          {
+            "chunk_id": "wochunk::silver-4753",
+            "source_id": "silver-4753",
+            "score": 4.2654337882995605
+          },
+          {
+            "chunk_id": "wochunk::silver-2886",
+            "source_id": "silver-2886",
+            "score": 3.2610015869140625
+          },
+          {
+            "chunk_id": "wochunk::silver-2766",
+            "source_id": "silver-2766",
+            "score": 3.2610015869140625
+          },
+          {
+            "chunk_id": "wochunk::silver-6615",
+            "source_id": "silver-6615",
+            "score": 2.9391655921936035
+          },
+          {
+            "chunk_id": "wochunk::silver-1871",
+            "source_id": "silver-1871",
+            "score": 2.9391655921936035
+          },
+          {
+            "chunk_id": "wochunk::silver-0089",
+            "source_id": "silver-0089",
+            "score": 2.9391655921936035
+          },
+          {
+            "chunk_id": "wochunk::silver-3964",
+            "source_id": "silver-3964",
+            "score": 2.8726773262023926
+          },
+          {
+            "chunk_id": "wochunk::silver-4944",
+            "source_id": "silver-4944",
+            "score": 2.6751487255096436
+          },
+          {
+            "chunk_id": "wochunk::gold-0008",
+            "source_id": "gold-0008",
+            "score": 2.6751487255096436
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.3260595412115671,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-005",
+        "stratum": "single_hop",
+        "text": "What damage was reported to the cabin door?",
+        "gold_evidence": [
+          "gold-0109"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4570",
+            "source_id": "silver-4570",
+            "score": 5.822021484375
+          },
+          {
+            "chunk_id": "wochunk::silver-2604",
+            "source_id": "silver-2604",
+            "score": 5.5424346923828125
+          },
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 4.455198287963867
+          },
+          {
+            "chunk_id": "wochunk::silver-2917",
+            "source_id": "silver-2917",
+            "score": 4.248683929443359
+          },
+          {
+            "chunk_id": "wochunk::silver-6919",
+            "source_id": "silver-6919",
+            "score": 4.1365203857421875
+          },
+          {
+            "chunk_id": "wochunk::silver-1289",
+            "source_id": "silver-1289",
+            "score": 3.764948606491089
+          },
+          {
+            "chunk_id": "wochunk::silver-6872",
+            "source_id": "silver-6872",
+            "score": 3.705883026123047
+          },
+          {
+            "chunk_id": "wochunk::gold-0452",
+            "source_id": "gold-0452",
+            "score": 3.601634979248047
+          },
+          {
+            "chunk_id": "wochunk::gold-0109",
+            "source_id": "gold-0109",
+            "score": 3.4546289443969727
+          },
+          {
+            "chunk_id": "wochunk::silver-6207",
+            "source_id": "silver-6207",
+            "score": 3.4546289443969727
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.3010299956639812,
+        "rank_of_first_hit": 9
+      },
+      {
+        "id": "q-006",
+        "stratum": "single_hop",
+        "text": "What was the reported fault with the brake?",
+        "gold_evidence": [
+          "gold-0066",
+          "gold-0092",
+          "gold-0093",
+          "gold-0094",
+          "gold-0095",
+          "gold-0096",
+          "gold-0134",
+          "gold-0181"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3382",
+            "source_id": "silver-3382",
+            "score": 4.106492042541504
+          },
+          {
+            "chunk_id": "wochunk::silver-5977",
+            "source_id": "silver-5977",
+            "score": 3.7012124061584473
+          },
+          {
+            "chunk_id": "wochunk::gold-0384",
+            "source_id": "gold-0384",
+            "score": 3.3687429428100586
+          },
+          {
+            "chunk_id": "wochunk::gold-0095",
+            "source_id": "gold-0095",
+            "score": 3.3687429428100586
+          },
+          {
+            "chunk_id": "wochunk::gold-0666",
+            "source_id": "gold-0666",
+            "score": 3.3687429428100586
+          },
+          {
+            "chunk_id": "wochunk::gold-0430",
+            "source_id": "gold-0430",
+            "score": 3.3687429428100586
+          },
+          {
+            "chunk_id": "wochunk::silver-1716",
+            "source_id": "silver-1716",
+            "score": 3.3687429428100586
+          },
+          {
+            "chunk_id": "wochunk::silver-2278",
+            "source_id": "silver-2278",
+            "score": 3.0910801887512207
+          },
+          {
+            "chunk_id": "wochunk::gold-0356",
+            "source_id": "gold-0356",
+            "score": 3.0910801887512207
+          },
+          {
+            "chunk_id": "wochunk::silver-6531",
+            "source_id": "silver-6531",
+            "score": 3.0910801887512207
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.1089364926177559,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-007",
+        "stratum": "single_hop",
+        "text": "What was done about the weeping boom cylinder hose?",
+        "gold_evidence": [
+          "gold-0183"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0183",
+            "source_id": "gold-0183",
+            "score": 6.738259315490723
+          },
+          {
+            "chunk_id": "wochunk::silver-5382",
+            "source_id": "silver-5382",
+            "score": 5.106048583984375
+          },
+          {
+            "chunk_id": "wochunk::gold-0697",
+            "source_id": "gold-0697",
+            "score": 4.854711055755615
+          },
+          {
+            "chunk_id": "wochunk::gold-0503",
+            "source_id": "gold-0503",
+            "score": 4.75147819519043
+          },
+          {
+            "chunk_id": "wochunk::gold-0608",
+            "source_id": "gold-0608",
+            "score": 4.3598456382751465
+          },
+          {
+            "chunk_id": "wochunk::silver-4204",
+            "source_id": "silver-4204",
+            "score": 4.240674018859863
+          },
+          {
+            "chunk_id": "wochunk::silver-4120",
+            "source_id": "silver-4120",
+            "score": 3.902078866958618
+          },
+          {
+            "chunk_id": "wochunk::gold-0653",
+            "source_id": "gold-0653",
+            "score": 3.8922698497772217
+          },
+          {
+            "chunk_id": "wochunk::silver-0153",
+            "source_id": "silver-0153",
+            "score": 3.8553075790405273
+          },
+          {
+            "chunk_id": "wochunk::silver-2714",
+            "source_id": "silver-2714",
+            "score": 3.5515663623809814
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-008",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the bucket?",
+        "gold_evidence": [
+          "gold-0078",
+          "gold-0084",
+          "gold-0087",
+          "gold-0108",
+          "gold-0177",
+          "gold-0279",
+          "gold-0315",
+          "gold-0324"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3964",
+            "source_id": "silver-3964",
+            "score": 4.803736686706543
+          },
+          {
+            "chunk_id": "wochunk::silver-4214",
+            "source_id": "silver-4214",
+            "score": 3.1042003631591797
+          },
+          {
+            "chunk_id": "wochunk::silver-1507",
+            "source_id": "silver-1507",
+            "score": 2.8990654945373535
+          },
+          {
+            "chunk_id": "wochunk::silver-4260",
+            "source_id": "silver-4260",
+            "score": 2.5891659259796143
+          },
+          {
+            "chunk_id": "wochunk::silver-1812",
+            "source_id": "silver-1812",
+            "score": 2.5891659259796143
+          },
+          {
+            "chunk_id": "wochunk::silver-5317",
+            "source_id": "silver-5317",
+            "score": 2.5891659259796143
+          },
+          {
+            "chunk_id": "wochunk::silver-0708",
+            "source_id": "silver-0708",
+            "score": 2.5891659259796143
+          },
+          {
+            "chunk_id": "wochunk::silver-2119",
+            "source_id": "silver-2119",
+            "score": 2.5891659259796143
+          },
+          {
+            "chunk_id": "wochunk::silver-1875",
+            "source_id": "silver-1875",
+            "score": 2.5891659259796143
+          },
+          {
+            "chunk_id": "wochunk::silver-3588",
+            "source_id": "silver-3588",
+            "score": 2.5891659259796143
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-009",
+        "stratum": "single_hop",
+        "text": "Where was the coolant hose leaking?",
+        "gold_evidence": [
+          "gold-0208"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0387",
+            "source_id": "gold-0387",
+            "score": 4.524253845214844
+          },
+          {
+            "chunk_id": "wochunk::gold-0208",
+            "source_id": "gold-0208",
+            "score": 4.095870018005371
+          },
+          {
+            "chunk_id": "wochunk::silver-6123",
+            "source_id": "silver-6123",
+            "score": 3.9685864448547363
+          },
+          {
+            "chunk_id": "wochunk::silver-4535",
+            "source_id": "silver-4535",
+            "score": 3.6120996475219727
+          },
+          {
+            "chunk_id": "wochunk::silver-0067",
+            "source_id": "silver-0067",
+            "score": 3.379258632659912
+          },
+          {
+            "chunk_id": "wochunk::silver-5903",
+            "source_id": "silver-5903",
+            "score": 3.379258632659912
+          },
+          {
+            "chunk_id": "wochunk::silver-0864",
+            "source_id": "silver-0864",
+            "score": 3.379258632659912
+          },
+          {
+            "chunk_id": "wochunk::silver-5403",
+            "source_id": "silver-5403",
+            "score": 3.314378499984741
+          },
+          {
+            "chunk_id": "wochunk::silver-3187",
+            "source_id": "silver-3187",
+            "score": 3.314378499984741
+          },
+          {
+            "chunk_id": "wochunk::silver-3898",
+            "source_id": "silver-3898",
+            "score": 3.1462204456329346
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-010",
+        "stratum": "single_hop",
+        "text": "What was the reported condition of the steering cylinder bearings?",
+        "gold_evidence": [
+          "gold-0333"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0333",
+            "source_id": "gold-0333",
+            "score": 4.717099666595459
+          },
+          {
+            "chunk_id": "wochunk::silver-3358",
+            "source_id": "silver-3358",
+            "score": 4.292227745056152
+          },
+          {
+            "chunk_id": "wochunk::silver-6768",
+            "source_id": "silver-6768",
+            "score": 4.145682334899902
+          },
+          {
+            "chunk_id": "wochunk::silver-6612",
+            "source_id": "silver-6612",
+            "score": 4.129976272583008
+          },
+          {
+            "chunk_id": "wochunk::silver-6560",
+            "source_id": "silver-6560",
+            "score": 3.825317144393921
+          },
+          {
+            "chunk_id": "wochunk::silver-6500",
+            "source_id": "silver-6500",
+            "score": 3.815490961074829
+          },
+          {
+            "chunk_id": "wochunk::silver-0984",
+            "source_id": "silver-0984",
+            "score": 3.815490961074829
+          },
+          {
+            "chunk_id": "wochunk::silver-4074",
+            "source_id": "silver-4074",
+            "score": 3.5100221633911133
+          },
+          {
+            "chunk_id": "wochunk::gold-0717",
+            "source_id": "gold-0717",
+            "score": 3.4668097496032715
+          },
+          {
+            "chunk_id": "wochunk::silver-1548",
+            "source_id": "silver-1548",
+            "score": 3.4668097496032715
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-011",
+        "stratum": "single_hop",
+        "text": "What was wrong with the exhaust shield?",
+        "gold_evidence": [
+          "gold-0703"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3392",
+            "source_id": "silver-3392",
+            "score": 5.243018627166748
+          },
+          {
+            "chunk_id": "wochunk::gold-0703",
+            "source_id": "gold-0703",
+            "score": 5.243018627166748
+          },
+          {
+            "chunk_id": "wochunk::silver-6504",
+            "source_id": "silver-6504",
+            "score": 5.243018627166748
+          },
+          {
+            "chunk_id": "wochunk::silver-5243",
+            "source_id": "silver-5243",
+            "score": 3.1269350051879883
+          },
+          {
+            "chunk_id": "wochunk::silver-5962",
+            "source_id": "silver-5962",
+            "score": 3.0555107593536377
+          },
+          {
+            "chunk_id": "wochunk::silver-0183",
+            "source_id": "silver-0183",
+            "score": 2.811211585998535
+          },
+          {
+            "chunk_id": "wochunk::gold-0979",
+            "source_id": "gold-0979",
+            "score": 2.684417963027954
+          },
+          {
+            "chunk_id": "wochunk::silver-2657",
+            "source_id": "silver-2657",
+            "score": 2.533766269683838
+          },
+          {
+            "chunk_id": "wochunk::gold-0616",
+            "source_id": "gold-0616",
+            "score": 2.533766269683838
+          },
+          {
+            "chunk_id": "wochunk::silver-0179",
+            "source_id": "silver-0179",
+            "score": 2.533766269683838
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-012",
+        "stratum": "single_hop",
+        "text": "What action was taken on the stabilizer bar?",
+        "gold_evidence": [
+          "gold-0136"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0136",
+            "source_id": "gold-0136",
+            "score": 5.363799095153809
+          },
+          {
+            "chunk_id": "wochunk::silver-1797",
+            "source_id": "silver-1797",
+            "score": 3.464041233062744
+          },
+          {
+            "chunk_id": "wochunk::silver-6490",
+            "source_id": "silver-6490",
+            "score": 2.804107427597046
+          },
+          {
+            "chunk_id": "wochunk::silver-2881",
+            "source_id": "silver-2881",
+            "score": 2.552222490310669
+          },
+          {
+            "chunk_id": "wochunk::silver-4116",
+            "source_id": "silver-4116",
+            "score": 2.552222490310669
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0029::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0029",
+            "score": 2.463932991027832
+          },
+          {
+            "chunk_id": "wochunk::silver-6879",
+            "source_id": "silver-6879",
+            "score": 2.341859817504883
+          },
+          {
+            "chunk_id": "wochunk::silver-6061",
+            "source_id": "silver-6061",
+            "score": 2.341859817504883
+          },
+          {
+            "chunk_id": "wochunk::silver-6708",
+            "source_id": "silver-6708",
+            "score": 2.341859817504883
+          },
+          {
+            "chunk_id": "wochunk::silver-3233",
+            "source_id": "silver-3233",
+            "score": 2.341859817504883
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-013",
+        "stratum": "multi_hop",
+        "text": "Which maintenance activities are most frequently performed on pulleys across the fleet?",
+        "gold_evidence": [
+          "gold-0563",
+          "gold-0573",
+          "gold-0207",
+          "gold-0319",
+          "gold-0759"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "doc::HDRB-manual::sec0029::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0029",
+            "score": 3.677872657775879
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0004::chunk0003",
+            "source_id": "doc::HDRB-manual::sec0004",
+            "score": 3.611165761947632
+          },
+          {
+            "chunk_id": "wochunk::silver-1554",
+            "source_id": "silver-1554",
+            "score": 3.3201820850372314
+          },
+          {
+            "chunk_id": "wochunk::silver-5138",
+            "source_id": "silver-5138",
+            "score": 3.3201820850372314
+          },
+          {
+            "chunk_id": "wochunk::silver-4091",
+            "source_id": "silver-4091",
+            "score": 3.3201820850372314
+          },
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 3.0252766609191895
+          },
+          {
+            "chunk_id": "wochunk::silver-6702",
+            "source_id": "silver-6702",
+            "score": 2.7348203659057617
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0040::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0040",
+            "score": 2.6412460803985596
+          },
+          {
+            "chunk_id": "wochunk::silver-6154",
+            "source_id": "silver-6154",
+            "score": 2.489159107208252
+          },
+          {
+            "chunk_id": "wochunk::silver-3707",
+            "source_id": "silver-3707",
+            "score": 2.489159107208252
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-014",
+        "stratum": "multi_hop",
+        "text": "Which assets have both a replacement and a repair recorded against them?",
+        "gold_evidence": [
+          "gold-0324",
+          "gold-0315",
+          "gold-0713",
+          "gold-0701",
+          "gold-0084",
+          "gold-0087",
+          "gold-0279",
+          "gold-0528"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3740",
+            "source_id": "silver-3740",
+            "score": 3.2235660552978516
+          },
+          {
+            "chunk_id": "wochunk::gold-0817",
+            "source_id": "gold-0817",
+            "score": 3.213723659515381
+          },
+          {
+            "chunk_id": "wochunk::silver-0250",
+            "source_id": "silver-0250",
+            "score": 3.111154556274414
+          },
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 3.0252766609191895
+          },
+          {
+            "chunk_id": "wochunk::silver-6607",
+            "source_id": "silver-6607",
+            "score": 2.9781012535095215
+          },
+          {
+            "chunk_id": "wochunk::silver-4932",
+            "source_id": "silver-4932",
+            "score": 2.9781012535095215
+          },
+          {
+            "chunk_id": "wochunk::gold-0804",
+            "source_id": "gold-0804",
+            "score": 2.804107427597046
+          },
+          {
+            "chunk_id": "wochunk::silver-5806",
+            "source_id": "silver-5806",
+            "score": 2.804107427597046
+          },
+          {
+            "chunk_id": "wochunk::silver-3885",
+            "source_id": "silver-3885",
+            "score": 2.804107427597046
+          },
+          {
+            "chunk_id": "wochunk::silver-5778",
+            "source_id": "silver-5778",
+            "score": 2.804107427597046
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-015",
+        "stratum": "multi_hop",
+        "text": "Which assets appear most often in the maintenance record?",
+        "gold_evidence": [
+          "gold-0064",
+          "gold-0065",
+          "gold-0066",
+          "gold-0067",
+          "gold-0069",
+          "gold-0070",
+          "gold-0037",
+          "gold-0085"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4049",
+            "source_id": "silver-4049",
+            "score": 3.7752060890197754
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0004::chunk0003",
+            "source_id": "doc::HDRB-manual::sec0004",
+            "score": 3.611165761947632
+          },
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 3.0252766609191895
+          },
+          {
+            "chunk_id": "wochunk::silver-6702",
+            "source_id": "silver-6702",
+            "score": 2.7348203659057617
+          },
+          {
+            "chunk_id": "wochunk::silver-6154",
+            "source_id": "silver-6154",
+            "score": 2.489159107208252
+          },
+          {
+            "chunk_id": "wochunk::silver-3707",
+            "source_id": "silver-3707",
+            "score": 2.489159107208252
+          },
+          {
+            "chunk_id": "wochunk::silver-4752",
+            "source_id": "silver-4752",
+            "score": 2.283994436264038
+          },
+          {
+            "chunk_id": "wochunk::silver-1544",
+            "source_id": "silver-1544",
+            "score": 2.283994436264038
+          },
+          {
+            "chunk_id": "wochunk::silver-1568",
+            "source_id": "silver-1568",
+            "score": 2.283994436264038
+          },
+          {
+            "chunk_id": "wochunk::silver-2507",
+            "source_id": "silver-2507",
+            "score": 2.283994436264038
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-017",
+        "stratum": "multi_hop",
+        "text": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+        "gold_evidence": [
+          "gold-1002",
+          "gold-1009",
+          "gold-1028",
+          "gold-0536",
+          "gold-0796",
+          "gold-0001",
+          "gold-0537",
+          "gold-0675"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-1010",
+            "source_id": "gold-1010",
+            "score": 3.7752060890197754
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0004::chunk0003",
+            "source_id": "doc::HDRB-manual::sec0004",
+            "score": 3.611165761947632
+          },
+          {
+            "chunk_id": "wochunk::silver-0327",
+            "source_id": "silver-0327",
+            "score": 3.3299784660339355
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0002::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0002",
+            "score": 3.3299784660339355
+          },
+          {
+            "chunk_id": "wochunk::silver-3466",
+            "source_id": "silver-3466",
+            "score": 3.3299784660339355
+          },
+          {
+            "chunk_id": "wochunk::silver-4584",
+            "source_id": "silver-4584",
+            "score": 3.2196743488311768
+          },
+          {
+            "chunk_id": "wochunk::silver-3783",
+            "source_id": "silver-3783",
+            "score": 3.2002649307250977
+          },
+          {
+            "chunk_id": "wochunk::silver-4151",
+            "source_id": "silver-4151",
+            "score": 3.0555107593536377
+          },
+          {
+            "chunk_id": "wochunk::silver-5687",
+            "source_id": "silver-5687",
+            "score": 3.0555107593536377
+          },
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 3.0252766609191895
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-018",
+        "stratum": "multi_hop",
+        "text": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+        "gold_evidence": [
+          "gold-0520",
+          "gold-0796",
+          "gold-0003",
+          "gold-0001",
+          "gold-0052",
+          "gold-0801",
+          "gold-0002",
+          "gold-0011"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2653",
+            "source_id": "silver-2653",
+            "score": 2.8503170013427734
+          },
+          {
+            "chunk_id": "wochunk::silver-2759",
+            "source_id": "silver-2759",
+            "score": 2.8346800804138184
+          },
+          {
+            "chunk_id": "wochunk::silver-1357",
+            "source_id": "silver-1357",
+            "score": 2.8346800804138184
+          },
+          {
+            "chunk_id": "wochunk::silver-0405",
+            "source_id": "silver-0405",
+            "score": 2.8346800804138184
+          },
+          {
+            "chunk_id": "wochunk::silver-2584",
+            "source_id": "silver-2584",
+            "score": 2.8115732669830322
+          },
+          {
+            "chunk_id": "wochunk::gold-0141",
+            "source_id": "gold-0141",
+            "score": 2.597480535507202
+          },
+          {
+            "chunk_id": "wochunk::silver-3943",
+            "source_id": "silver-3943",
+            "score": 2.5800490379333496
+          },
+          {
+            "chunk_id": "wochunk::silver-2665",
+            "source_id": "silver-2665",
+            "score": 2.5800490379333496
+          },
+          {
+            "chunk_id": "wochunk::silver-3721",
+            "source_id": "silver-3721",
+            "score": 2.5800490379333496
+          },
+          {
+            "chunk_id": "wochunk::silver-1828",
+            "source_id": "silver-1828",
+            "score": 2.5800490379333496
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-019",
+        "stratum": "multi_hop",
+        "text": "Which activities are applied across the widest range of different assets?",
+        "gold_evidence": [
+          "gold-0293",
+          "gold-0975",
+          "gold-0777",
+          "gold-1005",
+          "gold-0818",
+          "gold-1011",
+          "gold-0147",
+          "gold-0776"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2903",
+            "source_id": "silver-2903",
+            "score": 3.40203857421875
+          },
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 3.0252766609191895
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0070::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0070",
+            "score": 2.225599765777588
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0064::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0064",
+            "score": 2.225599765777588
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0061::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0061",
+            "score": 1.9657893180847168
+          },
+          {
+            "chunk_id": "doc::SOMM_Pulley::sec0004::chunk0000",
+            "source_id": "doc::SOMM_Pulley::sec0004",
+            "score": 1.777668833732605
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0067::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0067",
+            "score": 1.5216935873031616
+          },
+          {
+            "chunk_id": "doc::SOMM_Pulley::sec0001::chunk0001",
+            "source_id": "doc::SOMM_Pulley::sec0001",
+            "score": 0.8035125136375427
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0016::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0016",
+            "score": 0.60066157579422
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0056::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0056",
+            "score": 0.3695594370365143
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-020",
+        "stratum": "multi_hop",
+        "text": "Are there assets where a fault was reported but no corrective activity was recorded in the same work order?",
+        "gold_evidence": [
+          "gold-0880",
+          "gold-0083",
+          "gold-0011",
+          "gold-0044",
+          "gold-0082",
+          "gold-0314",
+          "gold-0036",
+          "gold-0864"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3964",
+            "source_id": "silver-3964",
+            "score": 2.8726773262023926
+          },
+          {
+            "chunk_id": "wochunk::silver-3463",
+            "source_id": "silver-3463",
+            "score": 2.842601776123047
+          },
+          {
+            "chunk_id": "wochunk::gold-0939",
+            "source_id": "gold-0939",
+            "score": 2.842601776123047
+          },
+          {
+            "chunk_id": "wochunk::silver-5868",
+            "source_id": "silver-5868",
+            "score": 2.842601776123047
+          },
+          {
+            "chunk_id": "wochunk::silver-2759",
+            "source_id": "silver-2759",
+            "score": 2.8346800804138184
+          },
+          {
+            "chunk_id": "wochunk::silver-0405",
+            "source_id": "silver-0405",
+            "score": 2.8346800804138184
+          },
+          {
+            "chunk_id": "wochunk::silver-1357",
+            "source_id": "silver-1357",
+            "score": 2.8346800804138184
+          },
+          {
+            "chunk_id": "wochunk::silver-5258",
+            "source_id": "silver-5258",
+            "score": 2.6083052158355713
+          },
+          {
+            "chunk_id": "wochunk::silver-4890",
+            "source_id": "silver-4890",
+            "score": 2.6083052158355713
+          },
+          {
+            "chunk_id": "wochunk::silver-6721",
+            "source_id": "silver-6721",
+            "score": 2.6083052158355713
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-021",
+        "stratum": "multi_hop",
+        "text": "Which corrective activities are most commonly paired with reported faults?",
+        "gold_evidence": [
+          "gold-0451",
+          "gold-0443",
+          "gold-0364",
+          "gold-0201",
+          "gold-0688",
+          "gold-0430",
+          "gold-0275",
+          "gold-0243"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-6933",
+            "source_id": "silver-6933",
+            "score": 3.4651265144348145
+          },
+          {
+            "chunk_id": "wochunk::silver-2622",
+            "source_id": "silver-2622",
+            "score": 3.4651265144348145
+          },
+          {
+            "chunk_id": "wochunk::silver-6220",
+            "source_id": "silver-6220",
+            "score": 3.4651265144348145
+          },
+          {
+            "chunk_id": "wochunk::gold-0272",
+            "source_id": "gold-0272",
+            "score": 3.1231448650360107
+          },
+          {
+            "chunk_id": "wochunk::silver-0023",
+            "source_id": "silver-0023",
+            "score": 3.1231448650360107
+          },
+          {
+            "chunk_id": "wochunk::silver-0988",
+            "source_id": "silver-0988",
+            "score": 3.1231448650360107
+          },
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 3.0252766609191895
+          },
+          {
+            "chunk_id": "wochunk::silver-2651",
+            "source_id": "silver-2651",
+            "score": 2.842601776123047
+          },
+          {
+            "chunk_id": "wochunk::silver-3683",
+            "source_id": "silver-3683",
+            "score": 2.842601776123047
+          },
+          {
+            "chunk_id": "wochunk::gold-0510",
+            "source_id": "gold-0510",
+            "score": 2.842601776123047
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-022",
+        "stratum": "multi_hop",
+        "text": "Which components are changed out most often across the fleet?",
+        "gold_evidence": [
+          "gold-0555",
+          "gold-0418",
+          "gold-0556",
+          "gold-0594",
+          "gold-0595",
+          "gold-0574",
+          "gold-0596",
+          "gold-0575"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0841",
+            "source_id": "gold-0841",
+            "score": 4.018284797668457
+          },
+          {
+            "chunk_id": "wochunk::silver-5939",
+            "source_id": "silver-5939",
+            "score": 4.018284797668457
+          },
+          {
+            "chunk_id": "wochunk::silver-3029",
+            "source_id": "silver-3029",
+            "score": 4.018284797668457
+          },
+          {
+            "chunk_id": "wochunk::silver-4091",
+            "source_id": "silver-4091",
+            "score": 3.3201820850372314
+          },
+          {
+            "chunk_id": "wochunk::silver-5138",
+            "source_id": "silver-5138",
+            "score": 3.3201820850372314
+          },
+          {
+            "chunk_id": "wochunk::silver-1554",
+            "source_id": "silver-1554",
+            "score": 3.3201820850372314
+          },
+          {
+            "chunk_id": "wochunk::silver-1533",
+            "source_id": "silver-1533",
+            "score": 3.2632997035980225
+          },
+          {
+            "chunk_id": "wochunk::silver-3954",
+            "source_id": "silver-3954",
+            "score": 3.2632997035980225
+          },
+          {
+            "chunk_id": "wochunk::silver-1698",
+            "source_id": "silver-1698",
+            "score": 3.2632997035980225
+          },
+          {
+            "chunk_id": "wochunk::silver-1730",
+            "source_id": "silver-1730",
+            "score": 3.0252766609191895
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-023",
+        "stratum": "unanswerable",
+        "text": "How much did the tail pulley replacement cost?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "doc::HDRB-manual::sec0004::chunk0006",
+            "source_id": "doc::HDRB-manual::sec0004",
+            "score": 4.984262466430664
+          },
+          {
+            "chunk_id": "wochunk::silver-5806",
+            "source_id": "silver-5806",
+            "score": 4.353054046630859
+          },
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 4.200242519378662
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 4.200242519378662
+          },
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 4.200242519378662
+          },
+          {
+            "chunk_id": "wochunk::silver-0951",
+            "source_id": "silver-0951",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-6705",
+            "source_id": "silver-6705",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-3126",
+            "source_id": "silver-3126",
+            "score": 3.822946786880493
+          },
+          {
+            "chunk_id": "wochunk::silver-4540",
+            "source_id": "silver-4540",
+            "score": 3.822946786880493
+          }
+        ],
+        "top1_score": 4.984262466430664,
+        "mean_top10_score": 4.105277800559998
+      },
+      {
+        "id": "q-024",
+        "stratum": "unanswerable",
+        "text": "Which supplier provided the replacement bearing?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5831",
+            "source_id": "silver-5831",
+            "score": 4.781321048736572
+          },
+          {
+            "chunk_id": "wochunk::silver-0917",
+            "source_id": "silver-0917",
+            "score": 4.308266639709473
+          },
+          {
+            "chunk_id": "wochunk::silver-5772",
+            "source_id": "silver-5772",
+            "score": 4.308266639709473
+          },
+          {
+            "chunk_id": "wochunk::silver-1054",
+            "source_id": "silver-1054",
+            "score": 3.953165054321289
+          },
+          {
+            "chunk_id": "wochunk::silver-4961",
+            "source_id": "silver-4961",
+            "score": 3.6521434783935547
+          },
+          {
+            "chunk_id": "wochunk::silver-6255",
+            "source_id": "silver-6255",
+            "score": 3.6521434783935547
+          },
+          {
+            "chunk_id": "wochunk::silver-0250",
+            "source_id": "silver-0250",
+            "score": 3.111154556274414
+          },
+          {
+            "chunk_id": "wochunk::silver-5778",
+            "source_id": "silver-5778",
+            "score": 2.804107427597046
+          },
+          {
+            "chunk_id": "wochunk::silver-1465",
+            "source_id": "silver-1465",
+            "score": 2.804107427597046
+          },
+          {
+            "chunk_id": "wochunk::gold-0804",
+            "source_id": "gold-0804",
+            "score": 2.804107427597046
+          }
+        ],
+        "top1_score": 4.781321048736572,
+        "mean_top10_score": 3.6178783178329468
+      },
+      {
+        "id": "q-025",
+        "stratum": "unanswerable",
+        "text": "On what date was the most recent pulley inspection carried out?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-1791",
+            "source_id": "silver-1791",
+            "score": 4.706402778625488
+          },
+          {
+            "chunk_id": "wochunk::gold-0299",
+            "source_id": "gold-0299",
+            "score": 3.629305839538574
+          },
+          {
+            "chunk_id": "wochunk::silver-5377",
+            "source_id": "silver-5377",
+            "score": 3.4729526042938232
+          },
+          {
+            "chunk_id": "wochunk::gold-1064",
+            "source_id": "gold-1064",
+            "score": 3.0765843391418457
+          },
+          {
+            "chunk_id": "wochunk::silver-6781",
+            "source_id": "silver-6781",
+            "score": 2.9004483222961426
+          },
+          {
+            "chunk_id": "wochunk::silver-4276",
+            "source_id": "silver-4276",
+            "score": 2.775017023086548
+          },
+          {
+            "chunk_id": "wochunk::silver-0514",
+            "source_id": "silver-0514",
+            "score": 2.761420726776123
+          },
+          {
+            "chunk_id": "wochunk::silver-4700",
+            "source_id": "silver-4700",
+            "score": 2.761420726776123
+          },
+          {
+            "chunk_id": "wochunk::silver-2979",
+            "source_id": "silver-2979",
+            "score": 2.761420726776123
+          },
+          {
+            "chunk_id": "wochunk::silver-1846",
+            "source_id": "silver-1846",
+            "score": 2.761420726776123
+          }
+        ],
+        "top1_score": 4.706402778625488,
+        "mean_top10_score": 3.1606393814086915
+      }
+    ],
+    "dense": [
+      {
+        "id": "q-001",
+        "stratum": "single_hop",
+        "text": "What was reported about the tail pulley?",
+        "gold_evidence": [
+          "gold-0391"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 0.9191417694091797
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 0.8898839950561523
+          },
+          {
+            "chunk_id": "wochunk::silver-0785",
+            "source_id": "silver-0785",
+            "score": 0.8886508941650391
+          },
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 0.8875360488891602
+          },
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 0.8873968124389648
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 0.8862838745117188
+          },
+          {
+            "chunk_id": "wochunk::silver-5425",
+            "source_id": "silver-5425",
+            "score": 0.8747091293334961
+          },
+          {
+            "chunk_id": "wochunk::silver-2817",
+            "source_id": "silver-2817",
+            "score": 0.8713197708129883
+          },
+          {
+            "chunk_id": "wochunk::silver-1801",
+            "source_id": "silver-1801",
+            "score": 0.8682451248168945
+          },
+          {
+            "chunk_id": "wochunk::silver-6512",
+            "source_id": "silver-6512",
+            "score": 0.8675317764282227
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-002",
+        "stratum": "single_hop",
+        "text": "What was reported about the bend pulley?",
+        "gold_evidence": [
+          "gold-0056"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 0.8827962875366211
+          },
+          {
+            "chunk_id": "wochunk::silver-4341",
+            "source_id": "silver-4341",
+            "score": 0.8760585784912109
+          },
+          {
+            "chunk_id": "wochunk::silver-6735",
+            "source_id": "silver-6735",
+            "score": 0.8733224868774414
+          },
+          {
+            "chunk_id": "wochunk::silver-2199",
+            "source_id": "silver-2199",
+            "score": 0.8721895217895508
+          },
+          {
+            "chunk_id": "wochunk::silver-6512",
+            "source_id": "silver-6512",
+            "score": 0.8706417083740234
+          },
+          {
+            "chunk_id": "wochunk::silver-4268",
+            "source_id": "silver-4268",
+            "score": 0.8701267242431641
+          },
+          {
+            "chunk_id": "wochunk::silver-1094",
+            "source_id": "silver-1094",
+            "score": 0.8629112243652344
+          },
+          {
+            "chunk_id": "wochunk::silver-3393",
+            "source_id": "silver-3393",
+            "score": 0.8621149063110352
+          },
+          {
+            "chunk_id": "wochunk::silver-3689",
+            "source_id": "silver-3689",
+            "score": 0.8590316772460938
+          },
+          {
+            "chunk_id": "wochunk::silver-3554",
+            "source_id": "silver-3554",
+            "score": 0.8582878112792969
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-003",
+        "stratum": "single_hop",
+        "text": "What problem was reported with the air conditioner?",
+        "gold_evidence": [
+          "gold-0000",
+          "gold-0001",
+          "gold-0002",
+          "gold-0003",
+          "gold-0004",
+          "gold-0052",
+          "gold-0064",
+          "gold-0065"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5660",
+            "source_id": "silver-5660",
+            "score": 0.9080104827880859
+          },
+          {
+            "chunk_id": "wochunk::silver-3373",
+            "source_id": "silver-3373",
+            "score": 0.9067630767822266
+          },
+          {
+            "chunk_id": "wochunk::silver-2113",
+            "source_id": "silver-2113",
+            "score": 0.8907871246337891
+          },
+          {
+            "chunk_id": "wochunk::silver-1411",
+            "source_id": "silver-1411",
+            "score": 0.885188102722168
+          },
+          {
+            "chunk_id": "wochunk::silver-3122",
+            "source_id": "silver-3122",
+            "score": 0.8835697174072266
+          },
+          {
+            "chunk_id": "wochunk::silver-0715",
+            "source_id": "silver-0715",
+            "score": 0.8801860809326172
+          },
+          {
+            "chunk_id": "wochunk::silver-4104",
+            "source_id": "silver-4104",
+            "score": 0.8801021575927734
+          },
+          {
+            "chunk_id": "wochunk::silver-5225",
+            "source_id": "silver-5225",
+            "score": 0.8799781799316406
+          },
+          {
+            "chunk_id": "wochunk::silver-0647",
+            "source_id": "silver-0647",
+            "score": 0.8799676895141602
+          },
+          {
+            "chunk_id": "wochunk::gold-0522",
+            "source_id": "gold-0522",
+            "score": 0.8797283172607422
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-004",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the horn?",
+        "gold_evidence": [
+          "gold-0008",
+          "gold-0009",
+          "gold-0010",
+          "gold-0011",
+          "gold-0012",
+          "gold-0013",
+          "gold-0014",
+          "gold-0015"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2766",
+            "source_id": "silver-2766",
+            "score": 0.8262882232666016
+          },
+          {
+            "chunk_id": "wochunk::silver-2886",
+            "source_id": "silver-2886",
+            "score": 0.8113937377929688
+          },
+          {
+            "chunk_id": "wochunk::silver-2359",
+            "source_id": "silver-2359",
+            "score": 0.8078451156616211
+          },
+          {
+            "chunk_id": "wochunk::silver-0089",
+            "source_id": "silver-0089",
+            "score": 0.7982769012451172
+          },
+          {
+            "chunk_id": "wochunk::silver-1871",
+            "source_id": "silver-1871",
+            "score": 0.7881002426147461
+          },
+          {
+            "chunk_id": "wochunk::silver-0000",
+            "source_id": "silver-0000",
+            "score": 0.7868318557739258
+          },
+          {
+            "chunk_id": "wochunk::gold-0752",
+            "source_id": "gold-0752",
+            "score": 0.7786922454833984
+          },
+          {
+            "chunk_id": "wochunk::silver-5702",
+            "source_id": "silver-5702",
+            "score": 0.7779006958007812
+          },
+          {
+            "chunk_id": "wochunk::silver-4944",
+            "source_id": "silver-4944",
+            "score": 0.7756280899047852
+          },
+          {
+            "chunk_id": "wochunk::gold-0524",
+            "source_id": "gold-0524",
+            "score": 0.7712306976318359
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-005",
+        "stratum": "single_hop",
+        "text": "What damage was reported to the cabin door?",
+        "gold_evidence": [
+          "gold-0109"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4570",
+            "source_id": "silver-4570",
+            "score": 0.9045505523681641
+          },
+          {
+            "chunk_id": "wochunk::silver-2604",
+            "source_id": "silver-2604",
+            "score": 0.9018497467041016
+          },
+          {
+            "chunk_id": "wochunk::silver-0001",
+            "source_id": "silver-0001",
+            "score": 0.901432991027832
+          },
+          {
+            "chunk_id": "wochunk::gold-0109",
+            "source_id": "gold-0109",
+            "score": 0.8911075592041016
+          },
+          {
+            "chunk_id": "wochunk::silver-6740",
+            "source_id": "silver-6740",
+            "score": 0.8907365798950195
+          },
+          {
+            "chunk_id": "wochunk::silver-6872",
+            "source_id": "silver-6872",
+            "score": 0.881317138671875
+          },
+          {
+            "chunk_id": "wochunk::silver-6919",
+            "source_id": "silver-6919",
+            "score": 0.8772048950195312
+          },
+          {
+            "chunk_id": "wochunk::gold-0863",
+            "source_id": "gold-0863",
+            "score": 0.8756389617919922
+          },
+          {
+            "chunk_id": "wochunk::silver-0126",
+            "source_id": "silver-0126",
+            "score": 0.8673553466796875
+          },
+          {
+            "chunk_id": "wochunk::silver-6207",
+            "source_id": "silver-6207",
+            "score": 0.8660497665405273
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.43067655807339306,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-006",
+        "stratum": "single_hop",
+        "text": "What was the reported fault with the brake?",
+        "gold_evidence": [
+          "gold-0066",
+          "gold-0092",
+          "gold-0093",
+          "gold-0094",
+          "gold-0095",
+          "gold-0096",
+          "gold-0134",
+          "gold-0181"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3382",
+            "source_id": "silver-3382",
+            "score": 0.9374570846557617
+          },
+          {
+            "chunk_id": "wochunk::silver-5977",
+            "source_id": "silver-5977",
+            "score": 0.8930501937866211
+          },
+          {
+            "chunk_id": "wochunk::silver-0179",
+            "source_id": "silver-0179",
+            "score": 0.8814563751220703
+          },
+          {
+            "chunk_id": "wochunk::silver-0638",
+            "source_id": "silver-0638",
+            "score": 0.8807096481323242
+          },
+          {
+            "chunk_id": "wochunk::gold-0430",
+            "source_id": "gold-0430",
+            "score": 0.8802642822265625
+          },
+          {
+            "chunk_id": "wochunk::silver-6166",
+            "source_id": "silver-6166",
+            "score": 0.879725456237793
+          },
+          {
+            "chunk_id": "wochunk::silver-1716",
+            "source_id": "silver-1716",
+            "score": 0.8786983489990234
+          },
+          {
+            "chunk_id": "wochunk::gold-0666",
+            "source_id": "gold-0666",
+            "score": 0.8784341812133789
+          },
+          {
+            "chunk_id": "wochunk::silver-2631",
+            "source_id": "silver-2631",
+            "score": 0.8779659271240234
+          },
+          {
+            "chunk_id": "wochunk::silver-1951",
+            "source_id": "silver-1951",
+            "score": 0.8768014907836914
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-007",
+        "stratum": "single_hop",
+        "text": "What was done about the weeping boom cylinder hose?",
+        "gold_evidence": [
+          "gold-0183"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4120",
+            "source_id": "silver-4120",
+            "score": 0.902125358581543
+          },
+          {
+            "chunk_id": "wochunk::silver-5372",
+            "source_id": "silver-5372",
+            "score": 0.900568962097168
+          },
+          {
+            "chunk_id": "wochunk::silver-1495",
+            "source_id": "silver-1495",
+            "score": 0.9005641937255859
+          },
+          {
+            "chunk_id": "wochunk::gold-0183",
+            "source_id": "gold-0183",
+            "score": 0.8970136642456055
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 0.8903799057006836
+          },
+          {
+            "chunk_id": "wochunk::gold-0078",
+            "source_id": "gold-0078",
+            "score": 0.8856935501098633
+          },
+          {
+            "chunk_id": "wochunk::gold-0067",
+            "source_id": "gold-0067",
+            "score": 0.8853740692138672
+          },
+          {
+            "chunk_id": "wochunk::silver-0489",
+            "source_id": "silver-0489",
+            "score": 0.8852357864379883
+          },
+          {
+            "chunk_id": "wochunk::gold-0697",
+            "source_id": "gold-0697",
+            "score": 0.8842954635620117
+          },
+          {
+            "chunk_id": "wochunk::silver-4454",
+            "source_id": "silver-4454",
+            "score": 0.882716178894043
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.43067655807339306,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-008",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the bucket?",
+        "gold_evidence": [
+          "gold-0078",
+          "gold-0084",
+          "gold-0087",
+          "gold-0108",
+          "gold-0177",
+          "gold-0279",
+          "gold-0315",
+          "gold-0324"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3964",
+            "source_id": "silver-3964",
+            "score": 0.8683624267578125
+          },
+          {
+            "chunk_id": "wochunk::silver-5607",
+            "source_id": "silver-5607",
+            "score": 0.8118038177490234
+          },
+          {
+            "chunk_id": "wochunk::silver-0669",
+            "source_id": "silver-0669",
+            "score": 0.806706428527832
+          },
+          {
+            "chunk_id": "wochunk::silver-4043",
+            "source_id": "silver-4043",
+            "score": 0.8060712814331055
+          },
+          {
+            "chunk_id": "wochunk::silver-5407",
+            "source_id": "silver-5407",
+            "score": 0.8015222549438477
+          },
+          {
+            "chunk_id": "wochunk::silver-5179",
+            "source_id": "silver-5179",
+            "score": 0.8011150360107422
+          },
+          {
+            "chunk_id": "wochunk::silver-4806",
+            "source_id": "silver-4806",
+            "score": 0.8001184463500977
+          },
+          {
+            "chunk_id": "wochunk::silver-4169",
+            "source_id": "silver-4169",
+            "score": 0.7982273101806641
+          },
+          {
+            "chunk_id": "wochunk::silver-3812",
+            "source_id": "silver-3812",
+            "score": 0.7958488464355469
+          },
+          {
+            "chunk_id": "wochunk::silver-4700",
+            "source_id": "silver-4700",
+            "score": 0.7956571578979492
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-009",
+        "stratum": "single_hop",
+        "text": "Where was the coolant hose leaking?",
+        "gold_evidence": [
+          "gold-0208"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0387",
+            "source_id": "gold-0387",
+            "score": 0.9301223754882812
+          },
+          {
+            "chunk_id": "wochunk::silver-3448",
+            "source_id": "silver-3448",
+            "score": 0.9284334182739258
+          },
+          {
+            "chunk_id": "wochunk::gold-0208",
+            "source_id": "gold-0208",
+            "score": 0.9280223846435547
+          },
+          {
+            "chunk_id": "wochunk::silver-5998",
+            "source_id": "silver-5998",
+            "score": 0.9246463775634766
+          },
+          {
+            "chunk_id": "wochunk::gold-0438",
+            "source_id": "gold-0438",
+            "score": 0.9073877334594727
+          },
+          {
+            "chunk_id": "wochunk::gold-0092",
+            "source_id": "gold-0092",
+            "score": 0.9073848724365234
+          },
+          {
+            "chunk_id": "wochunk::silver-2137",
+            "source_id": "silver-2137",
+            "score": 0.9068470001220703
+          },
+          {
+            "chunk_id": "wochunk::silver-1036",
+            "source_id": "silver-1036",
+            "score": 0.9050312042236328
+          },
+          {
+            "chunk_id": "wochunk::gold-0421",
+            "source_id": "gold-0421",
+            "score": 0.9049434661865234
+          },
+          {
+            "chunk_id": "wochunk::silver-0166",
+            "source_id": "silver-0166",
+            "score": 0.9048795700073242
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.5,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-010",
+        "stratum": "single_hop",
+        "text": "What was the reported condition of the steering cylinder bearings?",
+        "gold_evidence": [
+          "gold-0333"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0333",
+            "source_id": "gold-0333",
+            "score": 0.914851188659668
+          },
+          {
+            "chunk_id": "wochunk::silver-6560",
+            "source_id": "silver-6560",
+            "score": 0.9005851745605469
+          },
+          {
+            "chunk_id": "wochunk::silver-6768",
+            "source_id": "silver-6768",
+            "score": 0.8898410797119141
+          },
+          {
+            "chunk_id": "wochunk::silver-4074",
+            "source_id": "silver-4074",
+            "score": 0.8742294311523438
+          },
+          {
+            "chunk_id": "wochunk::silver-2597",
+            "source_id": "silver-2597",
+            "score": 0.8692026138305664
+          },
+          {
+            "chunk_id": "wochunk::gold-0424",
+            "source_id": "gold-0424",
+            "score": 0.8654890060424805
+          },
+          {
+            "chunk_id": "wochunk::silver-3358",
+            "source_id": "silver-3358",
+            "score": 0.8644981384277344
+          },
+          {
+            "chunk_id": "wochunk::silver-6719",
+            "source_id": "silver-6719",
+            "score": 0.8631086349487305
+          },
+          {
+            "chunk_id": "wochunk::silver-5938",
+            "source_id": "silver-5938",
+            "score": 0.8626508712768555
+          },
+          {
+            "chunk_id": "wochunk::silver-0833",
+            "source_id": "silver-0833",
+            "score": 0.8605146408081055
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-011",
+        "stratum": "single_hop",
+        "text": "What was wrong with the exhaust shield?",
+        "gold_evidence": [
+          "gold-0703"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5040",
+            "source_id": "silver-5040",
+            "score": 0.8971624374389648
+          },
+          {
+            "chunk_id": "wochunk::silver-3392",
+            "source_id": "silver-3392",
+            "score": 0.8824424743652344
+          },
+          {
+            "chunk_id": "wochunk::gold-0703",
+            "source_id": "gold-0703",
+            "score": 0.8757619857788086
+          },
+          {
+            "chunk_id": "wochunk::silver-6004",
+            "source_id": "silver-6004",
+            "score": 0.8696069717407227
+          },
+          {
+            "chunk_id": "wochunk::silver-0179",
+            "source_id": "silver-0179",
+            "score": 0.8642511367797852
+          },
+          {
+            "chunk_id": "wochunk::silver-3317",
+            "source_id": "silver-3317",
+            "score": 0.8593807220458984
+          },
+          {
+            "chunk_id": "wochunk::gold-0616",
+            "source_id": "gold-0616",
+            "score": 0.8553915023803711
+          },
+          {
+            "chunk_id": "wochunk::silver-4713",
+            "source_id": "silver-4713",
+            "score": 0.8541946411132812
+          },
+          {
+            "chunk_id": "wochunk::silver-5243",
+            "source_id": "silver-5243",
+            "score": 0.8535118103027344
+          },
+          {
+            "chunk_id": "wochunk::gold-0812",
+            "source_id": "gold-0812",
+            "score": 0.8509254455566406
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.5,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-012",
+        "stratum": "single_hop",
+        "text": "What action was taken on the stabilizer bar?",
+        "gold_evidence": [
+          "gold-0136"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5344",
+            "source_id": "silver-5344",
+            "score": 0.8017005920410156
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0053::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0053",
+            "score": 0.7956686019897461
+          },
+          {
+            "chunk_id": "wochunk::silver-6490",
+            "source_id": "silver-6490",
+            "score": 0.7942047119140625
+          },
+          {
+            "chunk_id": "wochunk::silver-2721",
+            "source_id": "silver-2721",
+            "score": 0.7937459945678711
+          },
+          {
+            "chunk_id": "wochunk::silver-6766",
+            "source_id": "silver-6766",
+            "score": 0.7933979034423828
+          },
+          {
+            "chunk_id": "wochunk::silver-6679",
+            "source_id": "silver-6679",
+            "score": 0.7916316986083984
+          },
+          {
+            "chunk_id": "wochunk::silver-3721",
+            "source_id": "silver-3721",
+            "score": 0.7915639877319336
+          },
+          {
+            "chunk_id": "wochunk::silver-6885",
+            "source_id": "silver-6885",
+            "score": 0.7908754348754883
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0043::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0043",
+            "score": 0.7904949188232422
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0037::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0037",
+            "score": 0.7896051406860352
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-013",
+        "stratum": "multi_hop",
+        "text": "Which maintenance activities are most frequently performed on pulleys across the fleet?",
+        "gold_evidence": [
+          "gold-0563",
+          "gold-0573",
+          "gold-0207",
+          "gold-0319",
+          "gold-0759"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0021::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0021",
+            "score": 0.8530769348144531
+          },
+          {
+            "chunk_id": "wochunk::silver-2991",
+            "source_id": "silver-2991",
+            "score": 0.8524293899536133
+          },
+          {
+            "chunk_id": "wochunk::silver-3925",
+            "source_id": "silver-3925",
+            "score": 0.8522329330444336
+          },
+          {
+            "chunk_id": "wochunk::silver-3777",
+            "source_id": "silver-3777",
+            "score": 0.8490438461303711
+          },
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 0.8486175537109375
+          },
+          {
+            "chunk_id": "wochunk::silver-6689",
+            "source_id": "silver-6689",
+            "score": 0.8468742370605469
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0062::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0062",
+            "score": 0.8448123931884766
+          },
+          {
+            "chunk_id": "wochunk::silver-3862",
+            "source_id": "silver-3862",
+            "score": 0.8444976806640625
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0005::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0005",
+            "score": 0.8429460525512695
+          },
+          {
+            "chunk_id": "wochunk::silver-6890",
+            "source_id": "silver-6890",
+            "score": 0.8427419662475586
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-014",
+        "stratum": "multi_hop",
+        "text": "Which assets have both a replacement and a repair recorded against them?",
+        "gold_evidence": [
+          "gold-0324",
+          "gold-0315",
+          "gold-0713",
+          "gold-0701",
+          "gold-0084",
+          "gold-0087",
+          "gold-0279",
+          "gold-0528"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-6499",
+            "source_id": "silver-6499",
+            "score": 0.8411197662353516
+          },
+          {
+            "chunk_id": "wochunk::silver-4646",
+            "source_id": "silver-4646",
+            "score": 0.8384742736816406
+          },
+          {
+            "chunk_id": "wochunk::silver-5610",
+            "source_id": "silver-5610",
+            "score": 0.8343019485473633
+          },
+          {
+            "chunk_id": "wochunk::silver-5683",
+            "source_id": "silver-5683",
+            "score": 0.8342294692993164
+          },
+          {
+            "chunk_id": "wochunk::silver-5506",
+            "source_id": "silver-5506",
+            "score": 0.834019660949707
+          },
+          {
+            "chunk_id": "wochunk::silver-0072",
+            "source_id": "silver-0072",
+            "score": 0.8335180282592773
+          },
+          {
+            "chunk_id": "wochunk::silver-2373",
+            "source_id": "silver-2373",
+            "score": 0.832850456237793
+          },
+          {
+            "chunk_id": "wochunk::silver-4382",
+            "source_id": "silver-4382",
+            "score": 0.8300790786743164
+          },
+          {
+            "chunk_id": "wochunk::silver-4675",
+            "source_id": "silver-4675",
+            "score": 0.829925537109375
+          },
+          {
+            "chunk_id": "wochunk::silver-3186",
+            "source_id": "silver-3186",
+            "score": 0.8294258117675781
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-015",
+        "stratum": "multi_hop",
+        "text": "Which assets appear most often in the maintenance record?",
+        "gold_evidence": [
+          "gold-0064",
+          "gold-0065",
+          "gold-0066",
+          "gold-0067",
+          "gold-0069",
+          "gold-0070",
+          "gold-0037",
+          "gold-0085"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4461",
+            "source_id": "silver-4461",
+            "score": 0.8268413543701172
+          },
+          {
+            "chunk_id": "wochunk::silver-3707",
+            "source_id": "silver-3707",
+            "score": 0.8154058456420898
+          },
+          {
+            "chunk_id": "wochunk::silver-3266",
+            "source_id": "silver-3266",
+            "score": 0.8143529891967773
+          },
+          {
+            "chunk_id": "wochunk::silver-2833",
+            "source_id": "silver-2833",
+            "score": 0.8137016296386719
+          },
+          {
+            "chunk_id": "wochunk::silver-6727",
+            "source_id": "silver-6727",
+            "score": 0.8118820190429688
+          },
+          {
+            "chunk_id": "wochunk::silver-5074",
+            "source_id": "silver-5074",
+            "score": 0.8092508316040039
+          },
+          {
+            "chunk_id": "wochunk::silver-5441",
+            "source_id": "silver-5441",
+            "score": 0.8085565567016602
+          },
+          {
+            "chunk_id": "wochunk::silver-5495",
+            "source_id": "silver-5495",
+            "score": 0.8084812164306641
+          },
+          {
+            "chunk_id": "wochunk::silver-1730",
+            "source_id": "silver-1730",
+            "score": 0.808110237121582
+          },
+          {
+            "chunk_id": "wochunk::gold-0085",
+            "source_id": "gold-0085",
+            "score": 0.8058977127075195
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.07311683844390995,
+        "rank_of_first_hit": 10
+      },
+      {
+        "id": "q-017",
+        "stratum": "multi_hop",
+        "text": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+        "gold_evidence": [
+          "gold-1002",
+          "gold-1009",
+          "gold-1028",
+          "gold-0536",
+          "gold-0796",
+          "gold-0001",
+          "gold-0537",
+          "gold-0675"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "doc::HDRB-manual::sec0101::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0101",
+            "score": 0.8453083038330078
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0084::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0084",
+            "score": 0.8297090530395508
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0079::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0079",
+            "score": 0.8261222839355469
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0028::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0028",
+            "score": 0.8210945129394531
+          },
+          {
+            "chunk_id": "wochunk::silver-5609",
+            "source_id": "silver-5609",
+            "score": 0.8189582824707031
+          },
+          {
+            "chunk_id": "wochunk::silver-0334",
+            "source_id": "silver-0334",
+            "score": 0.8178749084472656
+          },
+          {
+            "chunk_id": "wochunk::silver-1878",
+            "source_id": "silver-1878",
+            "score": 0.8178234100341797
+          },
+          {
+            "chunk_id": "wochunk::silver-3658",
+            "source_id": "silver-3658",
+            "score": 0.8176870346069336
+          },
+          {
+            "chunk_id": "wochunk::silver-3570",
+            "source_id": "silver-3570",
+            "score": 0.8168697357177734
+          },
+          {
+            "chunk_id": "wochunk::silver-2738",
+            "source_id": "silver-2738",
+            "score": 0.8165693283081055
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-018",
+        "stratum": "multi_hop",
+        "text": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+        "gold_evidence": [
+          "gold-0520",
+          "gold-0796",
+          "gold-0003",
+          "gold-0001",
+          "gold-0052",
+          "gold-0801",
+          "gold-0002",
+          "gold-0011"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4505",
+            "source_id": "silver-4505",
+            "score": 0.8146877288818359
+          },
+          {
+            "chunk_id": "wochunk::silver-0509",
+            "source_id": "silver-0509",
+            "score": 0.8098201751708984
+          },
+          {
+            "chunk_id": "wochunk::silver-2890",
+            "source_id": "silver-2890",
+            "score": 0.8087892532348633
+          },
+          {
+            "chunk_id": "wochunk::silver-4938",
+            "source_id": "silver-4938",
+            "score": 0.8087024688720703
+          },
+          {
+            "chunk_id": "wochunk::gold-0403",
+            "source_id": "gold-0403",
+            "score": 0.8085155487060547
+          },
+          {
+            "chunk_id": "wochunk::silver-0974",
+            "source_id": "silver-0974",
+            "score": 0.8064260482788086
+          },
+          {
+            "chunk_id": "wochunk::gold-0455",
+            "source_id": "gold-0455",
+            "score": 0.8064165115356445
+          },
+          {
+            "chunk_id": "wochunk::silver-6261",
+            "source_id": "silver-6261",
+            "score": 0.8051748275756836
+          },
+          {
+            "chunk_id": "wochunk::gold-0229",
+            "source_id": "gold-0229",
+            "score": 0.8045368194580078
+          },
+          {
+            "chunk_id": "wochunk::gold-0228",
+            "source_id": "gold-0228",
+            "score": 0.8038549423217773
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-019",
+        "stratum": "multi_hop",
+        "text": "Which activities are applied across the widest range of different assets?",
+        "gold_evidence": [
+          "gold-0293",
+          "gold-0975",
+          "gold-0777",
+          "gold-1005",
+          "gold-0818",
+          "gold-1011",
+          "gold-0147",
+          "gold-0776"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-4264",
+            "source_id": "silver-4264",
+            "score": 0.7797641754150391
+          },
+          {
+            "chunk_id": "wochunk::silver-0107",
+            "source_id": "silver-0107",
+            "score": 0.7753734588623047
+          },
+          {
+            "chunk_id": "wochunk::silver-5074",
+            "source_id": "silver-5074",
+            "score": 0.7736043930053711
+          },
+          {
+            "chunk_id": "wochunk::silver-4235",
+            "source_id": "silver-4235",
+            "score": 0.7732057571411133
+          },
+          {
+            "chunk_id": "wochunk::silver-3547",
+            "source_id": "silver-3547",
+            "score": 0.7705268859863281
+          },
+          {
+            "chunk_id": "wochunk::silver-5068",
+            "source_id": "silver-5068",
+            "score": 0.7701892852783203
+          },
+          {
+            "chunk_id": "wochunk::gold-0764",
+            "source_id": "gold-0764",
+            "score": 0.7697505950927734
+          },
+          {
+            "chunk_id": "wochunk::silver-5171",
+            "source_id": "silver-5171",
+            "score": 0.7695913314819336
+          },
+          {
+            "chunk_id": "wochunk::silver-5498",
+            "source_id": "silver-5498",
+            "score": 0.7685422897338867
+          },
+          {
+            "chunk_id": "wochunk::silver-3462",
+            "source_id": "silver-3462",
+            "score": 0.7681674957275391
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-020",
+        "stratum": "multi_hop",
+        "text": "Are there assets where a fault was reported but no corrective activity was recorded in the same work order?",
+        "gold_evidence": [
+          "gold-0880",
+          "gold-0083",
+          "gold-0011",
+          "gold-0044",
+          "gold-0082",
+          "gold-0314",
+          "gold-0036",
+          "gold-0864"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2012",
+            "source_id": "silver-2012",
+            "score": 0.8155984878540039
+          },
+          {
+            "chunk_id": "wochunk::silver-6614",
+            "source_id": "silver-6614",
+            "score": 0.8084249496459961
+          },
+          {
+            "chunk_id": "wochunk::gold-0364",
+            "source_id": "gold-0364",
+            "score": 0.8077926635742188
+          },
+          {
+            "chunk_id": "wochunk::silver-0638",
+            "source_id": "silver-0638",
+            "score": 0.8067331314086914
+          },
+          {
+            "chunk_id": "wochunk::silver-6005",
+            "source_id": "silver-6005",
+            "score": 0.8050804138183594
+          },
+          {
+            "chunk_id": "wochunk::silver-4938",
+            "source_id": "silver-4938",
+            "score": 0.8049716949462891
+          },
+          {
+            "chunk_id": "wochunk::silver-2021",
+            "source_id": "silver-2021",
+            "score": 0.8049173355102539
+          },
+          {
+            "chunk_id": "wochunk::silver-0652",
+            "source_id": "silver-0652",
+            "score": 0.8045997619628906
+          },
+          {
+            "chunk_id": "wochunk::silver-1769",
+            "source_id": "silver-1769",
+            "score": 0.8045797348022461
+          },
+          {
+            "chunk_id": "wochunk::silver-5061",
+            "source_id": "silver-5061",
+            "score": 0.8023967742919922
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-021",
+        "stratum": "multi_hop",
+        "text": "Which corrective activities are most commonly paired with reported faults?",
+        "gold_evidence": [
+          "gold-0451",
+          "gold-0443",
+          "gold-0364",
+          "gold-0201",
+          "gold-0688",
+          "gold-0430",
+          "gold-0275",
+          "gold-0243"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-6220",
+            "source_id": "silver-6220",
+            "score": 0.8056268692016602
+          },
+          {
+            "chunk_id": "wochunk::gold-0272",
+            "source_id": "gold-0272",
+            "score": 0.8023891448974609
+          },
+          {
+            "chunk_id": "wochunk::silver-5463",
+            "source_id": "silver-5463",
+            "score": 0.8020792007446289
+          },
+          {
+            "chunk_id": "wochunk::silver-3064",
+            "source_id": "silver-3064",
+            "score": 0.7973546981811523
+          },
+          {
+            "chunk_id": "wochunk::silver-2622",
+            "source_id": "silver-2622",
+            "score": 0.7954444885253906
+          },
+          {
+            "chunk_id": "wochunk::silver-5675",
+            "source_id": "silver-5675",
+            "score": 0.7953042984008789
+          },
+          {
+            "chunk_id": "wochunk::silver-5656",
+            "source_id": "silver-5656",
+            "score": 0.7947978973388672
+          },
+          {
+            "chunk_id": "wochunk::gold-0443",
+            "source_id": "gold-0443",
+            "score": 0.7947196960449219
+          },
+          {
+            "chunk_id": "wochunk::silver-0023",
+            "source_id": "silver-0023",
+            "score": 0.7926254272460938
+          },
+          {
+            "chunk_id": "wochunk::silver-0059",
+            "source_id": "silver-0059",
+            "score": 0.7923517227172852
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.07979453856244818,
+        "rank_of_first_hit": 8
+      },
+      {
+        "id": "q-022",
+        "stratum": "multi_hop",
+        "text": "Which components are changed out most often across the fleet?",
+        "gold_evidence": [
+          "gold-0555",
+          "gold-0418",
+          "gold-0556",
+          "gold-0594",
+          "gold-0595",
+          "gold-0574",
+          "gold-0596",
+          "gold-0575"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-6459",
+            "source_id": "silver-6459",
+            "score": 0.8262367248535156
+          },
+          {
+            "chunk_id": "wochunk::silver-3713",
+            "source_id": "silver-3713",
+            "score": 0.8184003829956055
+          },
+          {
+            "chunk_id": "wochunk::silver-2190",
+            "source_id": "silver-2190",
+            "score": 0.8075227737426758
+          },
+          {
+            "chunk_id": "wochunk::silver-4958",
+            "source_id": "silver-4958",
+            "score": 0.8072433471679688
+          },
+          {
+            "chunk_id": "wochunk::silver-2987",
+            "source_id": "silver-2987",
+            "score": 0.8053083419799805
+          },
+          {
+            "chunk_id": "wochunk::gold-0175",
+            "source_id": "gold-0175",
+            "score": 0.8042011260986328
+          },
+          {
+            "chunk_id": "wochunk::silver-2685",
+            "source_id": "silver-2685",
+            "score": 0.8041887283325195
+          },
+          {
+            "chunk_id": "wochunk::silver-3384",
+            "source_id": "silver-3384",
+            "score": 0.803441047668457
+          },
+          {
+            "chunk_id": "wochunk::silver-3358",
+            "source_id": "silver-3358",
+            "score": 0.8032865524291992
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0022::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0022",
+            "score": 0.8030662536621094
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-023",
+        "stratum": "unanswerable",
+        "text": "How much did the tail pulley replacement cost?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 0.920196533203125
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 0.9094705581665039
+          },
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 0.9034051895141602
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 0.9025106430053711
+          },
+          {
+            "chunk_id": "wochunk::silver-0956",
+            "source_id": "silver-0956",
+            "score": 0.9003086090087891
+          },
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 0.8990144729614258
+          },
+          {
+            "chunk_id": "wochunk::silver-1926",
+            "source_id": "silver-1926",
+            "score": 0.8973922729492188
+          },
+          {
+            "chunk_id": "wochunk::silver-0758",
+            "source_id": "silver-0758",
+            "score": 0.8954544067382812
+          },
+          {
+            "chunk_id": "wochunk::silver-6705",
+            "source_id": "silver-6705",
+            "score": 0.8947925567626953
+          },
+          {
+            "chunk_id": "wochunk::silver-5507",
+            "source_id": "silver-5507",
+            "score": 0.8939647674560547
+          }
+        ],
+        "top1_score": 0.920196533203125,
+        "mean_top10_score": 0.9016510009765625
+      },
+      {
+        "id": "q-024",
+        "stratum": "unanswerable",
+        "text": "Which supplier provided the replacement bearing?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3368",
+            "source_id": "silver-3368",
+            "score": 0.895350456237793
+          },
+          {
+            "chunk_id": "wochunk::silver-1967",
+            "source_id": "silver-1967",
+            "score": 0.8952207565307617
+          },
+          {
+            "chunk_id": "wochunk::silver-0917",
+            "source_id": "silver-0917",
+            "score": 0.8851499557495117
+          },
+          {
+            "chunk_id": "wochunk::silver-5772",
+            "source_id": "silver-5772",
+            "score": 0.8835458755493164
+          },
+          {
+            "chunk_id": "wochunk::silver-0260",
+            "source_id": "silver-0260",
+            "score": 0.8771429061889648
+          },
+          {
+            "chunk_id": "wochunk::silver-3548",
+            "source_id": "silver-3548",
+            "score": 0.8768815994262695
+          },
+          {
+            "chunk_id": "wochunk::silver-0121",
+            "source_id": "silver-0121",
+            "score": 0.8760690689086914
+          },
+          {
+            "chunk_id": "wochunk::silver-1054",
+            "source_id": "silver-1054",
+            "score": 0.874690055847168
+          },
+          {
+            "chunk_id": "wochunk::silver-6795",
+            "source_id": "silver-6795",
+            "score": 0.8725395202636719
+          },
+          {
+            "chunk_id": "wochunk::silver-3713",
+            "source_id": "silver-3713",
+            "score": 0.8719625473022461
+          }
+        ],
+        "top1_score": 0.895350456237793,
+        "mean_top10_score": 0.8808552742004394
+      },
+      {
+        "id": "q-025",
+        "stratum": "unanswerable",
+        "text": "On what date was the most recent pulley inspection carried out?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2991",
+            "source_id": "silver-2991",
+            "score": 0.8813533782958984
+          },
+          {
+            "chunk_id": "wochunk::silver-6689",
+            "source_id": "silver-6689",
+            "score": 0.8794584274291992
+          },
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 0.8702268600463867
+          },
+          {
+            "chunk_id": "wochunk::silver-3925",
+            "source_id": "silver-3925",
+            "score": 0.8650779724121094
+          },
+          {
+            "chunk_id": "wochunk::silver-1094",
+            "source_id": "silver-1094",
+            "score": 0.8639545440673828
+          },
+          {
+            "chunk_id": "wochunk::silver-6781",
+            "source_id": "silver-6781",
+            "score": 0.8619441986083984
+          },
+          {
+            "chunk_id": "wochunk::silver-5604",
+            "source_id": "silver-5604",
+            "score": 0.8612871170043945
+          },
+          {
+            "chunk_id": "wochunk::silver-3689",
+            "source_id": "silver-3689",
+            "score": 0.8600902557373047
+          },
+          {
+            "chunk_id": "wochunk::silver-2858",
+            "source_id": "silver-2858",
+            "score": 0.856898307800293
+          },
+          {
+            "chunk_id": "wochunk::silver-6884",
+            "source_id": "silver-6884",
+            "score": 0.8532867431640625
+          }
+        ],
+        "top1_score": 0.8813533782958984,
+        "mean_top10_score": 0.865357780456543
+      }
+    ],
+    "graph": [
+      {
+        "id": "q-001",
+        "stratum": "single_hop",
+        "text": "What was reported about the tail pulley?",
+        "gold_evidence": [
+          "gold-0391"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 6.581039892642569
+          },
+          {
+            "chunk_id": "wochunk::gold-0391",
+            "source_id": "gold-0391",
+            "score": 6.581039892642569
+          },
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-3126",
+            "source_id": "silver-3126",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-0951",
+            "source_id": "silver-0951",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-1801",
+            "source_id": "silver-1801",
+            "score": 6.5310398926425695
+          },
+          {
+            "chunk_id": "wochunk::silver-3644",
+            "source_id": "silver-3644",
+            "score": 6.5310398926425695
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-002",
+        "stratum": "single_hop",
+        "text": "What was reported about the bend pulley?",
+        "gold_evidence": [
+          "gold-0056"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 7.407718465827037
+          },
+          {
+            "chunk_id": "wochunk::gold-0056",
+            "source_id": "gold-0056",
+            "score": 7.407718465827037
+          },
+          {
+            "chunk_id": "wochunk::silver-4341",
+            "source_id": "silver-4341",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-6735",
+            "source_id": "silver-6735",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-1315",
+            "source_id": "silver-1315",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-4424",
+            "source_id": "silver-4424",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-2199",
+            "source_id": "silver-2199",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-6931",
+            "source_id": "silver-6931",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-0726",
+            "source_id": "silver-0726",
+            "score": 7.357718465827038
+          },
+          {
+            "chunk_id": "wochunk::silver-3665",
+            "source_id": "silver-3665",
+            "score": 7.357718465827038
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-003",
+        "stratum": "single_hop",
+        "text": "What problem was reported with the air conditioner?",
+        "gold_evidence": [
+          "gold-0000",
+          "gold-0001",
+          "gold-0002",
+          "gold-0003",
+          "gold-0004",
+          "gold-0052",
+          "gold-0064",
+          "gold-0065"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0004",
+            "source_id": "gold-0004",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0797",
+            "source_id": "gold-0797",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0821",
+            "source_id": "gold-0821",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0521",
+            "source_id": "gold-0521",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0676",
+            "source_id": "gold-0676",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0522",
+            "source_id": "gold-0522",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-1002",
+            "source_id": "gold-1002",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0064",
+            "source_id": "gold-0064",
+            "score": 4.47082669229598
+          },
+          {
+            "chunk_id": "wochunk::gold-0791",
+            "source_id": "gold-0791",
+            "score": 4.47082669229598
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.23573241784227988,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-004",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the horn?",
+        "gold_evidence": [
+          "gold-0008",
+          "gold-0009",
+          "gold-0010",
+          "gold-0011",
+          "gold-0012",
+          "gold-0013",
+          "gold-0014",
+          "gold-0015"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0010",
+            "source_id": "gold-0010",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0013",
+            "source_id": "gold-0013",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0752",
+            "source_id": "gold-0752",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0011",
+            "source_id": "gold-0011",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0008",
+            "source_id": "gold-0008",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0009",
+            "source_id": "gold-0009",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0014",
+            "source_id": "gold-0014",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0524",
+            "source_id": "gold-0524",
+            "score": 6.788679257420814
+          },
+          {
+            "chunk_id": "wochunk::gold-0918",
+            "source_id": "gold-0918",
+            "score": 6.788679257420814
+          }
+        ],
+        "recall_at_10": 0.75,
+        "ndcg_at_10": 0.6381208046145869,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-005",
+        "stratum": "single_hop",
+        "text": "What damage was reported to the cabin door?",
+        "gold_evidence": [
+          "gold-0109"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 16.38656060472595
+          },
+          {
+            "chunk_id": "wochunk::silver-2604",
+            "source_id": "silver-2604",
+            "score": 16.38656060472595
+          },
+          {
+            "chunk_id": "wochunk::gold-0452",
+            "source_id": "gold-0452",
+            "score": 11.569683524206729
+          },
+          {
+            "chunk_id": "wochunk::silver-2917",
+            "source_id": "silver-2917",
+            "score": 11.519683524206728
+          },
+          {
+            "chunk_id": "wochunk::gold-0109",
+            "source_id": "gold-0109",
+            "score": 10.177454427567024
+          },
+          {
+            "chunk_id": "wochunk::silver-6919",
+            "source_id": "silver-6919",
+            "score": 10.127454427567024
+          },
+          {
+            "chunk_id": "wochunk::silver-1289",
+            "source_id": "silver-1289",
+            "score": 10.127454427567024
+          },
+          {
+            "chunk_id": "wochunk::silver-2360",
+            "source_id": "silver-2360",
+            "score": 10.127454427567024
+          },
+          {
+            "chunk_id": "wochunk::silver-6207",
+            "source_id": "silver-6207",
+            "score": 10.127454427567024
+          },
+          {
+            "chunk_id": "wochunk::silver-6697",
+            "source_id": "silver-6697",
+            "score": 10.127454427567024
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.38685280723454163,
+        "rank_of_first_hit": 5
+      },
+      {
+        "id": "q-006",
+        "stratum": "single_hop",
+        "text": "What was the reported fault with the brake?",
+        "gold_evidence": [
+          "gold-0066",
+          "gold-0092",
+          "gold-0093",
+          "gold-0094",
+          "gold-0095",
+          "gold-0096",
+          "gold-0134",
+          "gold-0181"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0326",
+            "source_id": "gold-0326",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0420",
+            "source_id": "gold-0420",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0430",
+            "source_id": "gold-0430",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0666",
+            "source_id": "gold-0666",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0852",
+            "source_id": "gold-0852",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0095",
+            "source_id": "gold-0095",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0345",
+            "source_id": "gold-0345",
+            "score": 4.7737762368785495
+          },
+          {
+            "chunk_id": "wochunk::gold-0384",
+            "source_id": "gold-0384",
+            "score": 4.7737762368785495
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.20626588994627676,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-007",
+        "stratum": "single_hop",
+        "text": "What was done about the weeping boom cylinder hose?",
+        "gold_evidence": [
+          "gold-0183"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 12.64110007006635
+          },
+          {
+            "chunk_id": "wochunk::gold-0697",
+            "source_id": "gold-0697",
+            "score": 12.64110007006635
+          },
+          {
+            "chunk_id": "wochunk::gold-0183",
+            "source_id": "gold-0183",
+            "score": 12.64110007006635
+          },
+          {
+            "chunk_id": "wochunk::gold-0653",
+            "source_id": "gold-0653",
+            "score": 12.64110007006635
+          },
+          {
+            "chunk_id": "wochunk::silver-6179",
+            "source_id": "silver-6179",
+            "score": 8.387337883008197
+          },
+          {
+            "chunk_id": "wochunk::gold-0855",
+            "source_id": "gold-0855",
+            "score": 4.253762187058153
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 4.253762187058153
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 4.253762187058153
+          },
+          {
+            "chunk_id": "wochunk::gold-0503",
+            "source_id": "gold-0503",
+            "score": 4.253762187058153
+          },
+          {
+            "chunk_id": "wochunk::gold-0617",
+            "source_id": "gold-0617",
+            "score": 4.253762187058153
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.5,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-008",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the bucket?",
+        "gold_evidence": [
+          "gold-0078",
+          "gold-0084",
+          "gold-0087",
+          "gold-0108",
+          "gold-0177",
+          "gold-0279",
+          "gold-0315",
+          "gold-0324"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0529",
+            "source_id": "gold-0529",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0701",
+            "source_id": "gold-0701",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0279",
+            "source_id": "gold-0279",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0324",
+            "source_id": "gold-0324",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0315",
+            "source_id": "gold-0315",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0547",
+            "source_id": "gold-0547",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0087",
+            "source_id": "gold-0087",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0528",
+            "source_id": "gold-0528",
+            "score": 4.467045969456074
+          },
+          {
+            "chunk_id": "wochunk::gold-0683",
+            "source_id": "gold-0683",
+            "score": 4.467045969456074
+          }
+        ],
+        "recall_at_10": 0.5,
+        "ndcg_at_10": 0.3766826344677322,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-009",
+        "stratum": "single_hop",
+        "text": "Where was the coolant hose leaking?",
+        "gold_evidence": [
+          "gold-0208"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 8.100865646386984
+          },
+          {
+            "chunk_id": "wochunk::gold-0208",
+            "source_id": "gold-0208",
+            "score": 8.100865646386984
+          },
+          {
+            "chunk_id": "wochunk::silver-6123",
+            "source_id": "silver-6123",
+            "score": 8.050865646386983
+          },
+          {
+            "chunk_id": "wochunk::silver-4535",
+            "source_id": "silver-4535",
+            "score": 8.050865646386983
+          },
+          {
+            "chunk_id": "wochunk::silver-5403",
+            "source_id": "silver-5403",
+            "score": 8.050865646386983
+          },
+          {
+            "chunk_id": "wochunk::silver-3187",
+            "source_id": "silver-3187",
+            "score": 8.050865646386983
+          },
+          {
+            "chunk_id": "wochunk::silver-3842",
+            "source_id": "silver-3842",
+            "score": 8.050865646386983
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-010",
+        "stratum": "single_hop",
+        "text": "What was the reported condition of the steering cylinder bearings?",
+        "gold_evidence": [
+          "gold-0333"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 12.041192044631885
+          },
+          {
+            "chunk_id": "wochunk::gold-0333",
+            "source_id": "gold-0333",
+            "score": 12.041192044631885
+          },
+          {
+            "chunk_id": "wochunk::gold-0715",
+            "source_id": "gold-0715",
+            "score": 9.252224450809036
+          },
+          {
+            "chunk_id": "wochunk::silver-4964",
+            "source_id": "silver-4964",
+            "score": 8.366902781468546
+          },
+          {
+            "chunk_id": "wochunk::gold-0717",
+            "source_id": "gold-0717",
+            "score": 6.463256856986186
+          },
+          {
+            "chunk_id": "wochunk::gold-0709",
+            "source_id": "gold-0709",
+            "score": 6.463256856986186
+          },
+          {
+            "chunk_id": "wochunk::gold-0159",
+            "source_id": "gold-0159",
+            "score": 6.463256856986186
+          },
+          {
+            "chunk_id": "wochunk::gold-0172",
+            "source_id": "gold-0172",
+            "score": 6.463256856986186
+          },
+          {
+            "chunk_id": "wochunk::gold-0710",
+            "source_id": "gold-0710",
+            "score": 6.463256856986186
+          },
+          {
+            "chunk_id": "wochunk::gold-0718",
+            "source_id": "gold-0718",
+            "score": 6.463256856986186
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-011",
+        "stratum": "single_hop",
+        "text": "What was wrong with the exhaust shield?",
+        "gold_evidence": [
+          "gold-0703"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 9.353628614882352
+          },
+          {
+            "chunk_id": "wochunk::gold-0703",
+            "source_id": "gold-0703",
+            "score": 9.353628614882352
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-012",
+        "stratum": "single_hop",
+        "text": "What action was taken on the stabilizer bar?",
+        "gold_evidence": [
+          "gold-0136"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 9.353628614882352
+          },
+          {
+            "chunk_id": "wochunk::gold-0136",
+            "source_id": "gold-0136",
+            "score": 9.353628614882352
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-013",
+        "stratum": "multi_hop",
+        "text": "Which maintenance activities are most frequently performed on pulleys across the fleet?",
+        "gold_evidence": [
+          "gold-0563",
+          "gold-0573",
+          "gold-0207",
+          "gold-0319",
+          "gold-0759"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Activity",
+            "source_id": "graph::rank::Activity",
+            "score": 2.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0573",
+            "source_id": "gold-0573",
+            "score": 2.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0563",
+            "source_id": "gold-0563",
+            "score": 2.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0319",
+            "source_id": "gold-0319",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0759",
+            "source_id": "gold-0759",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0207",
+            "source_id": "gold-0207",
+            "score": 1.0
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.781651097425878,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-014",
+        "stratum": "multi_hop",
+        "text": "Which assets have both a replacement and a repair recorded against them?",
+        "gold_evidence": [
+          "gold-0324",
+          "gold-0315",
+          "gold-0713",
+          "gold-0701",
+          "gold-0084",
+          "gold-0087",
+          "gold-0279",
+          "gold-0528"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::both",
+            "source_id": "graph::both",
+            "score": 43.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1002",
+            "source_id": "gold-1002",
+            "score": 5.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0676",
+            "source_id": "gold-0676",
+            "score": 5.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0701",
+            "source_id": "gold-0701",
+            "score": 4.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0529",
+            "source_id": "gold-0529",
+            "score": 4.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0274",
+            "source_id": "gold-0274",
+            "score": 4.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0244",
+            "source_id": "gold-0244",
+            "score": 4.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0439",
+            "source_id": "gold-0439",
+            "score": 3.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0612",
+            "source_id": "gold-0612",
+            "score": 3.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0322",
+            "source_id": "gold-0322",
+            "score": 3.0
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.1089364926177559,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-015",
+        "stratum": "multi_hop",
+        "text": "Which assets appear most often in the maintenance record?",
+        "gold_evidence": [
+          "gold-0064",
+          "gold-0065",
+          "gold-0066",
+          "gold-0067",
+          "gold-0069",
+          "gold-0070",
+          "gold-0037",
+          "gold-0085"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Asset",
+            "source_id": "graph::rank::Asset",
+            "score": 58.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0855",
+            "source_id": "gold-0855",
+            "score": 58.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 58.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 58.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0503",
+            "source_id": "gold-0503",
+            "score": 58.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0617",
+            "source_id": "gold-0617",
+            "score": 58.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0882",
+            "source_id": "gold-0882",
+            "score": 55.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0004",
+            "source_id": "gold-0004",
+            "score": 47.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0492",
+            "source_id": "gold-0492",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0614",
+            "source_id": "gold-0614",
+            "score": 55.0
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.2354078440015845,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-017",
+        "stratum": "multi_hop",
+        "text": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+        "gold_evidence": [
+          "gold-1002",
+          "gold-1009",
+          "gold-1028",
+          "gold-0536",
+          "gold-0796",
+          "gold-0001",
+          "gold-0537",
+          "gold-0675"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::part_of",
+            "source_id": "graph::part_of",
+            "score": 571.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0882",
+            "source_id": "gold-0882",
+            "score": 40.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0885",
+            "source_id": "gold-0885",
+            "score": 40.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0609",
+            "source_id": "gold-0609",
+            "score": 40.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0838",
+            "source_id": "gold-0838",
+            "score": 40.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0459",
+            "source_id": "gold-0459",
+            "score": 40.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0079",
+            "source_id": "gold-0079",
+            "score": 35.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0821",
+            "source_id": "gold-0821",
+            "score": 32.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0460",
+            "source_id": "gold-0460",
+            "score": 35.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1002",
+            "source_id": "gold-1002",
+            "score": 32.0
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.07311683844390995,
+        "rank_of_first_hit": 10
+      },
+      {
+        "id": "q-018",
+        "stratum": "multi_hop",
+        "text": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+        "gold_evidence": [
+          "gold-0520",
+          "gold-0796",
+          "gold-0003",
+          "gold-0001",
+          "gold-0052",
+          "gold-0801",
+          "gold-0002",
+          "gold-0011"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::recurrence",
+            "source_id": "graph::recurrence",
+            "score": 19.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 19.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 19.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0069",
+            "source_id": "gold-0069",
+            "score": 19.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0079",
+            "source_id": "gold-0079",
+            "score": 19.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0695",
+            "source_id": "gold-0695",
+            "score": 19.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0240",
+            "source_id": "gold-0240",
+            "score": 8.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0002",
+            "source_id": "gold-0002",
+            "score": 7.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0239",
+            "source_id": "gold-0239",
+            "score": 8.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0001",
+            "source_id": "gold-0001",
+            "score": 7.0
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.15291137700635812,
+        "rank_of_first_hit": 8
+      },
+      {
+        "id": "q-019",
+        "stratum": "multi_hop",
+        "text": "Which activities are applied across the widest range of different assets?",
+        "gold_evidence": [
+          "gold-0293",
+          "gold-0975",
+          "gold-0777",
+          "gold-1005",
+          "gold-0818",
+          "gold-1011",
+          "gold-0147",
+          "gold-0776"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Activity",
+            "source_id": "graph::rank::Activity",
+            "score": 195.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1014",
+            "source_id": "gold-1014",
+            "score": 195.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1015",
+            "source_id": "gold-1015",
+            "score": 195.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1020",
+            "source_id": "gold-1020",
+            "score": 195.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0470",
+            "source_id": "gold-0470",
+            "score": 195.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0722",
+            "source_id": "gold-0722",
+            "score": 195.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0839",
+            "source_id": "gold-0839",
+            "score": 119.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0990",
+            "source_id": "gold-0990",
+            "score": 117.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0422",
+            "source_id": "gold-0422",
+            "score": 51.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0894",
+            "source_id": "gold-0894",
+            "score": 38.0
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-020",
+        "stratum": "multi_hop",
+        "text": "Are there assets where a fault was reported but no corrective activity was recorded in the same work order?",
+        "gold_evidence": [
+          "gold-0880",
+          "gold-0083",
+          "gold-0011",
+          "gold-0044",
+          "gold-0082",
+          "gold-0314",
+          "gold-0036",
+          "gold-0864"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::absence",
+            "source_id": "graph::absence",
+            "score": 245.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0897",
+            "source_id": "gold-0897",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0436",
+            "source_id": "gold-0436",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0242",
+            "source_id": "gold-0242",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0455",
+            "source_id": "gold-0455",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1061",
+            "source_id": "gold-1061",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0101",
+            "source_id": "gold-0101",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0115",
+            "source_id": "gold-0115",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0314",
+            "source_id": "gold-0314",
+            "score": 1.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0658",
+            "source_id": "gold-0658",
+            "score": 1.0
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.07614334071738352,
+        "rank_of_first_hit": 9
+      },
+      {
+        "id": "q-021",
+        "stratum": "multi_hop",
+        "text": "Which corrective activities are most commonly paired with reported faults?",
+        "gold_evidence": [
+          "gold-0451",
+          "gold-0443",
+          "gold-0364",
+          "gold-0201",
+          "gold-0688",
+          "gold-0430",
+          "gold-0275",
+          "gold-0243"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::pair::Activity-State",
+            "source_id": "graph::pair::Activity-State",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0695",
+            "source_id": "gold-0695",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0392",
+            "source_id": "gold-0392",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0494",
+            "source_id": "gold-0494",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0694",
+            "source_id": "gold-0694",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-1007",
+            "source_id": "gold-1007",
+            "score": 42.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0541",
+            "source_id": "gold-0541",
+            "score": 28.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0275",
+            "source_id": "gold-0275",
+            "score": 27.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0486",
+            "source_id": "gold-0486",
+            "score": 10.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0417",
+            "source_id": "gold-0417",
+            "score": 5.0
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.07979453856244818,
+        "rank_of_first_hit": 8
+      },
+      {
+        "id": "q-022",
+        "stratum": "multi_hop",
+        "text": "Which components are changed out most often across the fleet?",
+        "gold_evidence": [
+          "gold-0555",
+          "gold-0418",
+          "gold-0556",
+          "gold-0594",
+          "gold-0595",
+          "gold-0574",
+          "gold-0596",
+          "gold-0575"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Asset",
+            "source_id": "graph::rank::Asset",
+            "score": 15.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0140",
+            "source_id": "gold-0140",
+            "score": 15.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0554",
+            "source_id": "gold-0554",
+            "score": 15.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0555",
+            "source_id": "gold-0555",
+            "score": 15.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0142",
+            "source_id": "gold-0142",
+            "score": 15.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0141",
+            "source_id": "gold-0141",
+            "score": 15.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0139",
+            "source_id": "gold-0139",
+            "score": 14.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0182",
+            "source_id": "gold-0182",
+            "score": 12.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0541",
+            "source_id": "gold-0541",
+            "score": 11.0
+          },
+          {
+            "chunk_id": "wochunk::gold-0175",
+            "source_id": "gold-0175",
+            "score": 9.0
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.1089364926177559,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-023",
+        "stratum": "unanswerable",
+        "text": "How much did the tail pulley replacement cost?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 6.679479965455822
+          },
+          {
+            "chunk_id": "wochunk::gold-0804",
+            "source_id": "gold-0804",
+            "score": 6.679479965455822
+          },
+          {
+            "chunk_id": "wochunk::gold-0724",
+            "source_id": "gold-0724",
+            "score": 6.679479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-0250",
+            "source_id": "silver-0250",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-1465",
+            "source_id": "silver-1465",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-3885",
+            "source_id": "silver-3885",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-5778",
+            "source_id": "silver-5778",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-5806",
+            "source_id": "silver-5806",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-1083",
+            "source_id": "silver-1083",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-3038",
+            "source_id": "silver-3038",
+            "score": 6.629479965455822
+          }
+        ],
+        "top1_score": 6.679479965455822,
+        "mean_top10_score": 6.644479965455822
+      },
+      {
+        "id": "q-024",
+        "stratum": "unanswerable",
+        "text": "Which supplier provided the replacement bearing?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 11.427758729632293
+          },
+          {
+            "chunk_id": "wochunk::silver-5772",
+            "source_id": "silver-5772",
+            "score": 11.427758729632293
+          },
+          {
+            "chunk_id": "wochunk::silver-0917",
+            "source_id": "silver-0917",
+            "score": 11.427758729632293
+          },
+          {
+            "chunk_id": "wochunk::silver-1054",
+            "source_id": "silver-1054",
+            "score": 11.427758729632293
+          },
+          {
+            "chunk_id": "wochunk::silver-4961",
+            "source_id": "silver-4961",
+            "score": 11.427758729632293
+          },
+          {
+            "chunk_id": "wochunk::silver-6255",
+            "source_id": "silver-6255",
+            "score": 11.427758729632293
+          },
+          {
+            "chunk_id": "wochunk::gold-0804",
+            "source_id": "gold-0804",
+            "score": 6.679479965455822
+          },
+          {
+            "chunk_id": "wochunk::gold-0724",
+            "source_id": "gold-0724",
+            "score": 6.679479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-0250",
+            "source_id": "silver-0250",
+            "score": 6.629479965455822
+          },
+          {
+            "chunk_id": "wochunk::silver-1465",
+            "source_id": "silver-1465",
+            "score": 6.629479965455822
+          }
+        ],
+        "top1_score": 11.427758729632293,
+        "mean_top10_score": 9.518447223961704
+      },
+      {
+        "id": "q-025",
+        "stratum": "unanswerable",
+        "text": "On what date was the most recent pulley inspection carried out?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 9.303628614882351
+          },
+          {
+            "chunk_id": "wochunk::silver-1791",
+            "source_id": "silver-1791",
+            "score": 9.303628614882351
+          },
+          {
+            "chunk_id": "wochunk::silver-5377",
+            "source_id": "silver-5377",
+            "score": 8.936963564396285
+          },
+          {
+            "chunk_id": "wochunk::silver-4759",
+            "source_id": "silver-4759",
+            "score": 8.936963564396285
+          },
+          {
+            "chunk_id": "wochunk::silver-6781",
+            "source_id": "silver-6781",
+            "score": 8.936963564396285
+          },
+          {
+            "chunk_id": "wochunk::silver-6180",
+            "source_id": "silver-6180",
+            "score": 8.936963564396285
+          },
+          {
+            "chunk_id": "wochunk::gold-0942",
+            "source_id": "gold-0942",
+            "score": 4.853818944552086
+          },
+          {
+            "chunk_id": "wochunk::gold-0844",
+            "source_id": "gold-0844",
+            "score": 4.853818944552086
+          },
+          {
+            "chunk_id": "wochunk::gold-0530",
+            "source_id": "gold-0530",
+            "score": 4.853818944552086
+          },
+          {
+            "chunk_id": "wochunk::gold-0341",
+            "source_id": "gold-0341",
+            "score": 4.853818944552086
+          }
+        ],
+        "top1_score": 9.303628614882351,
+        "mean_top10_score": 7.377038726555819
+      }
+    ],
+    "hybrid": [
+      {
+        "id": "q-001",
+        "stratum": "single_hop",
+        "text": "What was reported about the tail pulley?",
+        "gold_evidence": [
+          "gold-0391"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 0.06324404761904762
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 0.0630272952853598
+          },
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 0.062259615384615385
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 0.06060606060606061
+          },
+          {
+            "chunk_id": "wochunk::silver-3126",
+            "source_id": "silver-3126",
+            "score": 0.05618453559834208
+          },
+          {
+            "chunk_id": "wochunk::silver-1801",
+            "source_id": "silver-1801",
+            "score": 0.05597826086956521
+          },
+          {
+            "chunk_id": "wochunk::silver-3644",
+            "source_id": "silver-3644",
+            "score": 0.055973830973830976
+          },
+          {
+            "chunk_id": "wochunk::silver-4955",
+            "source_id": "silver-4955",
+            "score": 0.05577539099302808
+          },
+          {
+            "chunk_id": "wochunk::silver-0951",
+            "source_id": "silver-0951",
+            "score": 0.05570077420384707
+          },
+          {
+            "chunk_id": "wochunk::silver-0785",
+            "source_id": "silver-0785",
+            "score": 0.05338116981952598
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-002",
+        "stratum": "single_hop",
+        "text": "What was reported about the bend pulley?",
+        "gold_evidence": [
+          "gold-0056"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0056",
+            "source_id": "gold-0056",
+            "score": 0.06427650713907986
+          },
+          {
+            "chunk_id": "wochunk::silver-6735",
+            "source_id": "silver-6735",
+            "score": 0.06300403225806452
+          },
+          {
+            "chunk_id": "wochunk::silver-4341",
+            "source_id": "silver-4341",
+            "score": 0.06277056277056277
+          },
+          {
+            "chunk_id": "wochunk::silver-2199",
+            "source_id": "silver-2199",
+            "score": 0.05952107593898638
+          },
+          {
+            "chunk_id": "wochunk::silver-1315",
+            "source_id": "silver-1315",
+            "score": 0.058653846153846154
+          },
+          {
+            "chunk_id": "wochunk::silver-4268",
+            "source_id": "silver-4268",
+            "score": 0.058345842784306205
+          },
+          {
+            "chunk_id": "wochunk::silver-4424",
+            "source_id": "silver-4424",
+            "score": 0.05728715728715729
+          },
+          {
+            "chunk_id": "wochunk::silver-6931",
+            "source_id": "silver-6931",
+            "score": 0.05727554179566563
+          },
+          {
+            "chunk_id": "wochunk::silver-0726",
+            "source_id": "silver-0726",
+            "score": 0.05625655939305085
+          },
+          {
+            "chunk_id": "wochunk::silver-3665",
+            "source_id": "silver-3665",
+            "score": 0.05596868884540117
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-003",
+        "stratum": "single_hop",
+        "text": "What problem was reported with the air conditioner?",
+        "gold_evidence": [
+          "gold-0000",
+          "gold-0001",
+          "gold-0002",
+          "gold-0003",
+          "gold-0004",
+          "gold-0052",
+          "gold-0064",
+          "gold-0065"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0797",
+            "source_id": "gold-0797",
+            "score": 0.056984126984126984
+          },
+          {
+            "chunk_id": "wochunk::gold-0521",
+            "source_id": "gold-0521",
+            "score": 0.044282744282744285
+          },
+          {
+            "chunk_id": "wochunk::gold-0004",
+            "source_id": "gold-0004",
+            "score": 0.04402277039848197
+          },
+          {
+            "chunk_id": "wochunk::gold-0522",
+            "source_id": "gold-0522",
+            "score": 0.043935253310910236
+          },
+          {
+            "chunk_id": "wochunk::gold-0821",
+            "source_id": "gold-0821",
+            "score": 0.04359567901234568
+          },
+          {
+            "chunk_id": "wochunk::gold-0676",
+            "source_id": "gold-0676",
+            "score": 0.04312354312354312
+          },
+          {
+            "chunk_id": "wochunk::gold-1002",
+            "source_id": "gold-1002",
+            "score": 0.040522875816993466
+          },
+          {
+            "chunk_id": "wochunk::gold-0523",
+            "source_id": "gold-0523",
+            "score": 0.03866146848602989
+          },
+          {
+            "chunk_id": "wochunk::gold-0002",
+            "source_id": "gold-0002",
+            "score": 0.038654934003771214
+          },
+          {
+            "chunk_id": "wochunk::silver-5660",
+            "source_id": "silver-5660",
+            "score": 0.03278688524590164
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.2026146921012121,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-004",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the horn?",
+        "gold_evidence": [
+          "gold-0008",
+          "gold-0009",
+          "gold-0010",
+          "gold-0011",
+          "gold-0012",
+          "gold-0013",
+          "gold-0014",
+          "gold-0015"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0010",
+            "source_id": "gold-0010",
+            "score": 0.059660466918531434
+          },
+          {
+            "chunk_id": "wochunk::silver-2766",
+            "source_id": "silver-2766",
+            "score": 0.059415702896923425
+          },
+          {
+            "chunk_id": "wochunk::gold-0009",
+            "source_id": "gold-0009",
+            "score": 0.05940208362844964
+          },
+          {
+            "chunk_id": "wochunk::silver-2886",
+            "source_id": "silver-2886",
+            "score": 0.0583178376047646
+          },
+          {
+            "chunk_id": "wochunk::gold-0752",
+            "source_id": "gold-0752",
+            "score": 0.05793787557440792
+          },
+          {
+            "chunk_id": "wochunk::gold-0013",
+            "source_id": "gold-0013",
+            "score": 0.05755355755355755
+          },
+          {
+            "chunk_id": "wochunk::silver-6615",
+            "source_id": "silver-6615",
+            "score": 0.05743589743589744
+          },
+          {
+            "chunk_id": "wochunk::gold-0524",
+            "source_id": "gold-0524",
+            "score": 0.05695890317751923
+          },
+          {
+            "chunk_id": "wochunk::gold-0008",
+            "source_id": "gold-0008",
+            "score": 0.056934423601090266
+          },
+          {
+            "chunk_id": "wochunk::silver-0089",
+            "source_id": "silver-0089",
+            "score": 0.056524399108354335
+          }
+        ],
+        "recall_at_10": 0.5,
+        "ndcg_at_10": 0.5456574035212369,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-005",
+        "stratum": "single_hop",
+        "text": "What damage was reported to the cabin door?",
+        "gold_evidence": [
+          "gold-0109"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-2604",
+            "source_id": "silver-2604",
+            "score": 0.06451612903225806
+          },
+          {
+            "chunk_id": "wochunk::gold-0109",
+            "source_id": "gold-0109",
+            "score": 0.06088698439241918
+          },
+          {
+            "chunk_id": "wochunk::silver-6919",
+            "source_id": "silver-6919",
+            "score": 0.06061301882197405
+          },
+          {
+            "chunk_id": "wochunk::silver-4570",
+            "source_id": "silver-4570",
+            "score": 0.059453551912568306
+          },
+          {
+            "chunk_id": "wochunk::silver-6207",
+            "source_id": "silver-6207",
+            "score": 0.05755693581780538
+          },
+          {
+            "chunk_id": "wochunk::silver-1289",
+            "source_id": "silver-1289",
+            "score": 0.05719738337139138
+          },
+          {
+            "chunk_id": "wochunk::silver-0001",
+            "source_id": "silver-0001",
+            "score": 0.05715916503587736
+          },
+          {
+            "chunk_id": "wochunk::silver-6591",
+            "source_id": "silver-6591",
+            "score": 0.054624624624624626
+          },
+          {
+            "chunk_id": "wochunk::silver-6697",
+            "source_id": "silver-6697",
+            "score": 0.053196053196053195
+          },
+          {
+            "chunk_id": "wochunk::silver-2445",
+            "source_id": "silver-2445",
+            "score": 0.05195681511470985
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.6309297535714575,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-006",
+        "stratum": "single_hop",
+        "text": "What was the reported fault with the brake?",
+        "gold_evidence": [
+          "gold-0066",
+          "gold-0092",
+          "gold-0093",
+          "gold-0094",
+          "gold-0095",
+          "gold-0096",
+          "gold-0134",
+          "gold-0181"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0430",
+            "source_id": "gold-0430",
+            "score": 0.06130536130536131
+          },
+          {
+            "chunk_id": "wochunk::gold-0666",
+            "source_id": "gold-0666",
+            "score": 0.06039352804058687
+          },
+          {
+            "chunk_id": "wochunk::gold-0384",
+            "source_id": "gold-0384",
+            "score": 0.05852895148669797
+          },
+          {
+            "chunk_id": "wochunk::gold-0095",
+            "source_id": "gold-0095",
+            "score": 0.05738244371822803
+          },
+          {
+            "chunk_id": "wochunk::gold-0434",
+            "source_id": "gold-0434",
+            "score": 0.05517503805175038
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 0.045444661883018045
+          },
+          {
+            "chunk_id": "wochunk::gold-0420",
+            "source_id": "gold-0420",
+            "score": 0.042877906976744186
+          },
+          {
+            "chunk_id": "wochunk::gold-0356",
+            "source_id": "gold-0356",
+            "score": 0.04266176770769545
+          },
+          {
+            "chunk_id": "wochunk::silver-3382",
+            "source_id": "silver-3382",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.1990365012701236,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-007",
+        "stratum": "single_hop",
+        "text": "What was done about the weeping boom cylinder hose?",
+        "gold_evidence": [
+          "gold-0183"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0183",
+            "source_id": "gold-0183",
+            "score": 0.06376447436898257
+          },
+          {
+            "chunk_id": "wochunk::gold-0697",
+            "source_id": "gold-0697",
+            "score": 0.06262383401233332
+          },
+          {
+            "chunk_id": "wochunk::gold-0653",
+            "source_id": "gold-0653",
+            "score": 0.060040389395194696
+          },
+          {
+            "chunk_id": "wochunk::gold-0503",
+            "source_id": "gold-0503",
+            "score": 0.0584993961352657
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 0.05849501022748404
+          },
+          {
+            "chunk_id": "wochunk::gold-0608",
+            "source_id": "gold-0608",
+            "score": 0.05228937728937729
+          },
+          {
+            "chunk_id": "wochunk::gold-0067",
+            "source_id": "gold-0067",
+            "score": 0.05200653471288383
+          },
+          {
+            "chunk_id": "wochunk::silver-6179",
+            "source_id": "silver-6179",
+            "score": 0.04239713774597496
+          },
+          {
+            "chunk_id": "wochunk::gold-0410",
+            "source_id": "gold-0410",
+            "score": 0.036442064554514354
+          },
+          {
+            "chunk_id": "wochunk::gold-0720",
+            "source_id": "gold-0720",
+            "score": 0.03463203463203463
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-008",
+        "stratum": "single_hop",
+        "text": "What work was recorded on the bucket?",
+        "gold_evidence": [
+          "gold-0078",
+          "gold-0084",
+          "gold-0087",
+          "gold-0108",
+          "gold-0177",
+          "gold-0279",
+          "gold-0315",
+          "gold-0324"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-3964",
+            "source_id": "silver-3964",
+            "score": 0.058103340942104176
+          },
+          {
+            "chunk_id": "wochunk::gold-0529",
+            "source_id": "gold-0529",
+            "score": 0.04460374352847471
+          },
+          {
+            "chunk_id": "wochunk::gold-0528",
+            "source_id": "gold-0528",
+            "score": 0.042318840579710144
+          },
+          {
+            "chunk_id": "wochunk::silver-4169",
+            "source_id": "silver-4169",
+            "score": 0.039397240377632536
+          },
+          {
+            "chunk_id": "wochunk::silver-5607",
+            "source_id": "silver-5607",
+            "score": 0.03911753800519095
+          },
+          {
+            "chunk_id": "wochunk::silver-0669",
+            "source_id": "silver-0669",
+            "score": 0.0386002886002886
+          },
+          {
+            "chunk_id": "wochunk::silver-4806",
+            "source_id": "silver-4806",
+            "score": 0.03845478489903424
+          },
+          {
+            "chunk_id": "wochunk::silver-6987",
+            "source_id": "silver-6987",
+            "score": 0.03725428027901078
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "wochunk::gold-0701",
+            "source_id": "gold-0701",
+            "score": 0.031746031746031744
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-009",
+        "stratum": "single_hop",
+        "text": "Where was the coolant hose leaking?",
+        "gold_evidence": [
+          "gold-0208"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0208",
+            "source_id": "gold-0208",
+            "score": 0.06426011264720942
+          },
+          {
+            "chunk_id": "wochunk::silver-6123",
+            "source_id": "silver-6123",
+            "score": 0.06170355466130114
+          },
+          {
+            "chunk_id": "wochunk::silver-4535",
+            "source_id": "silver-4535",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::silver-5403",
+            "source_id": "silver-5403",
+            "score": 0.04547511312217195
+          },
+          {
+            "chunk_id": "wochunk::silver-3187",
+            "source_id": "silver-3187",
+            "score": 0.04479578392621871
+          },
+          {
+            "chunk_id": "wochunk::silver-3842",
+            "source_id": "silver-3842",
+            "score": 0.042671259089169536
+          },
+          {
+            "chunk_id": "wochunk::gold-0387",
+            "source_id": "gold-0387",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "wochunk::silver-0166",
+            "source_id": "silver-0166",
+            "score": 0.027984344422700584
+          },
+          {
+            "chunk_id": "wochunk::gold-0421",
+            "source_id": "gold-0421",
+            "score": 0.025987006496751626
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-010",
+        "stratum": "single_hop",
+        "text": "What was the reported condition of the steering cylinder bearings?",
+        "gold_evidence": [
+          "gold-0333"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0333",
+            "source_id": "gold-0333",
+            "score": 0.06504494976203068
+          },
+          {
+            "chunk_id": "wochunk::silver-6538",
+            "source_id": "silver-6538",
+            "score": 0.054799662676375004
+          },
+          {
+            "chunk_id": "wochunk::silver-6719",
+            "source_id": "silver-6719",
+            "score": 0.05252305665349144
+          },
+          {
+            "chunk_id": "wochunk::silver-2023",
+            "source_id": "silver-2023",
+            "score": 0.0520554682257338
+          },
+          {
+            "chunk_id": "wochunk::silver-3261",
+            "source_id": "silver-3261",
+            "score": 0.05038152610441767
+          },
+          {
+            "chunk_id": "wochunk::silver-2306",
+            "source_id": "silver-2306",
+            "score": 0.04999167499167499
+          },
+          {
+            "chunk_id": "wochunk::gold-0717",
+            "source_id": "gold-0717",
+            "score": 0.04526198439241918
+          },
+          {
+            "chunk_id": "wochunk::gold-0715",
+            "source_id": "gold-0715",
+            "score": 0.044733044733044736
+          },
+          {
+            "chunk_id": "wochunk::gold-0709",
+            "source_id": "gold-0709",
+            "score": 0.044001660440016604
+          },
+          {
+            "chunk_id": "wochunk::silver-1548",
+            "source_id": "silver-1548",
+            "score": 0.04206349206349206
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-011",
+        "stratum": "single_hop",
+        "text": "What was wrong with the exhaust shield?",
+        "gold_evidence": [
+          "gold-0703"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0703",
+            "source_id": "gold-0703",
+            "score": 0.06426011264720942
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "wochunk::silver-3392",
+            "source_id": "silver-3392",
+            "score": 0.03252247488101534
+          },
+          {
+            "chunk_id": "wochunk::silver-5243",
+            "source_id": "silver-5243",
+            "score": 0.030117753623188408
+          },
+          {
+            "chunk_id": "wochunk::silver-0179",
+            "source_id": "silver-0179",
+            "score": 0.02967032967032967
+          },
+          {
+            "chunk_id": "wochunk::gold-0616",
+            "source_id": "gold-0616",
+            "score": 0.029418126757516764
+          },
+          {
+            "chunk_id": "wochunk::silver-3317",
+            "source_id": "silver-3317",
+            "score": 0.02813852813852814
+          },
+          {
+            "chunk_id": "wochunk::silver-4713",
+            "source_id": "silver-4713",
+            "score": 0.02803921568627451
+          },
+          {
+            "chunk_id": "wochunk::silver-2152",
+            "source_id": "silver-2152",
+            "score": 0.027046783625730993
+          },
+          {
+            "chunk_id": "wochunk::silver-0895",
+            "source_id": "silver-0895",
+            "score": 0.026742734890354787
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-012",
+        "stratum": "single_hop",
+        "text": "What action was taken on the stabilizer bar?",
+        "gold_evidence": [
+          "gold-0136"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0136",
+            "source_id": "gold-0136",
+            "score": 0.06504494976203068
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "wochunk::silver-1797",
+            "source_id": "silver-1797",
+            "score": 0.03200204813108039
+          },
+          {
+            "chunk_id": "wochunk::silver-6490",
+            "source_id": "silver-6490",
+            "score": 0.03125763125763126
+          },
+          {
+            "chunk_id": "wochunk::silver-5344",
+            "source_id": "silver-5344",
+            "score": 0.02832415420928403
+          },
+          {
+            "chunk_id": "wochunk::silver-1021",
+            "source_id": "silver-1021",
+            "score": 0.028083267871170464
+          },
+          {
+            "chunk_id": "wochunk::silver-4465",
+            "source_id": "silver-4465",
+            "score": 0.02782608695652174
+          },
+          {
+            "chunk_id": "wochunk::silver-6885",
+            "source_id": "silver-6885",
+            "score": 0.025320462098433298
+          },
+          {
+            "chunk_id": "wochunk::silver-2414",
+            "source_id": "silver-2414",
+            "score": 0.025278219395866455
+          },
+          {
+            "chunk_id": "wochunk::silver-6845",
+            "source_id": "silver-6845",
+            "score": 0.024448419797257006
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 1.0,
+        "rank_of_first_hit": 1
+      },
+      {
+        "id": "q-013",
+        "stratum": "multi_hop",
+        "text": "Which maintenance activities are most frequently performed on pulleys across the fleet?",
+        "gold_evidence": [
+          "gold-0563",
+          "gold-0573",
+          "gold-0207",
+          "gold-0319",
+          "gold-0759"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Activity",
+            "source_id": "graph::rank::Activity",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0573",
+            "source_id": "gold-0573",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0563",
+            "source_id": "gold-0563",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0319",
+            "source_id": "gold-0319",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0759",
+            "source_id": "gold-0759",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0207",
+            "source_id": "gold-0207",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0029::chunk0000",
+            "source_id": "doc::HDRB-manual::sec0029",
+            "score": 0.01639344262295082
+          },
+          {
+            "chunk_id": "doc::conveyor-pulley-and-idler-iom::sec0021::chunk0000",
+            "source_id": "doc::conveyor-pulley-and-idler-iom::sec0021",
+            "score": 0.01639344262295082
+          },
+          {
+            "chunk_id": "doc::HDRB-manual::sec0004::chunk0003",
+            "source_id": "doc::HDRB-manual::sec0004",
+            "score": 0.016129032258064516
+          },
+          {
+            "chunk_id": "wochunk::silver-2991",
+            "source_id": "silver-2991",
+            "score": 0.016129032258064516
+          }
+        ],
+        "recall_at_10": 1.0,
+        "ndcg_at_10": 0.781651097425878,
+        "rank_of_first_hit": 2
+      },
+      {
+        "id": "q-014",
+        "stratum": "multi_hop",
+        "text": "Which assets have both a replacement and a repair recorded against them?",
+        "gold_evidence": [
+          "gold-0324",
+          "gold-0315",
+          "gold-0713",
+          "gold-0701",
+          "gold-0084",
+          "gold-0087",
+          "gold-0279",
+          "gold-0528"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::both",
+            "source_id": "graph::both",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-1002",
+            "source_id": "gold-1002",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0676",
+            "source_id": "gold-0676",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0701",
+            "source_id": "gold-0701",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0529",
+            "source_id": "gold-0529",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0274",
+            "source_id": "gold-0274",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0244",
+            "source_id": "gold-0244",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0439",
+            "source_id": "gold-0439",
+            "score": 0.04411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-0612",
+            "source_id": "gold-0612",
+            "score": 0.043478260869565216
+          },
+          {
+            "chunk_id": "wochunk::gold-0322",
+            "source_id": "gold-0322",
+            "score": 0.04285714285714286
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.1089364926177559,
+        "rank_of_first_hit": 4
+      },
+      {
+        "id": "q-015",
+        "stratum": "multi_hop",
+        "text": "Which assets appear most often in the maintenance record?",
+        "gold_evidence": [
+          "gold-0064",
+          "gold-0065",
+          "gold-0066",
+          "gold-0067",
+          "gold-0069",
+          "gold-0070",
+          "gold-0037",
+          "gold-0085"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Asset",
+            "source_id": "graph::rank::Asset",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0855",
+            "source_id": "gold-0855",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0503",
+            "source_id": "gold-0503",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0612",
+            "source_id": "gold-0612",
+            "score": 0.0459915611814346
+          },
+          {
+            "chunk_id": "wochunk::gold-0617",
+            "source_id": "gold-0617",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0069",
+            "source_id": "gold-0069",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0079",
+            "source_id": "gold-0079",
+            "score": 0.04411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-0695",
+            "source_id": "gold-0695",
+            "score": 0.043478260869565216
+          }
+        ],
+        "recall_at_10": 0.375,
+        "ndcg_at_10": 0.31520238256403266,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-017",
+        "stratum": "multi_hop",
+        "text": "Which components are recorded as parts of larger assemblies in the maintenance data?",
+        "gold_evidence": [
+          "gold-1002",
+          "gold-1009",
+          "gold-1028",
+          "gold-0536",
+          "gold-0796",
+          "gold-0001",
+          "gold-0537",
+          "gold-0675"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::part_of",
+            "source_id": "graph::part_of",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0882",
+            "source_id": "gold-0882",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0885",
+            "source_id": "gold-0885",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0609",
+            "source_id": "gold-0609",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0838",
+            "source_id": "gold-0838",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0459",
+            "source_id": "gold-0459",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0679",
+            "source_id": "gold-0679",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0608",
+            "source_id": "gold-0608",
+            "score": 0.04411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-0264",
+            "source_id": "gold-0264",
+            "score": 0.043478260869565216
+          },
+          {
+            "chunk_id": "wochunk::gold-0372",
+            "source_id": "gold-0372",
+            "score": 0.04285714285714286
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-018",
+        "stratum": "multi_hop",
+        "text": "Do any assets show a recurring pattern of the same fault being reported more than once?",
+        "gold_evidence": [
+          "gold-0520",
+          "gold-0796",
+          "gold-0003",
+          "gold-0001",
+          "gold-0052",
+          "gold-0801",
+          "gold-0002",
+          "gold-0011"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::recurrence",
+            "source_id": "graph::recurrence",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0066",
+            "source_id": "gold-0066",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0070",
+            "source_id": "gold-0070",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0069",
+            "source_id": "gold-0069",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0079",
+            "source_id": "gold-0079",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0695",
+            "source_id": "gold-0695",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0541",
+            "source_id": "gold-0541",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0080",
+            "source_id": "gold-0080",
+            "score": 0.04411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-0067",
+            "source_id": "gold-0067",
+            "score": 0.043478260869565216
+          },
+          {
+            "chunk_id": "wochunk::gold-0064",
+            "source_id": "gold-0064",
+            "score": 0.04285714285714286
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-019",
+        "stratum": "multi_hop",
+        "text": "Which activities are applied across the widest range of different assets?",
+        "gold_evidence": [
+          "gold-0293",
+          "gold-0975",
+          "gold-0777",
+          "gold-1005",
+          "gold-0818",
+          "gold-1011",
+          "gold-0147",
+          "gold-0776"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::rank::Activity",
+            "source_id": "graph::rank::Activity",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-1014",
+            "source_id": "gold-1014",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-1015",
+            "source_id": "gold-1015",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-1020",
+            "source_id": "gold-1020",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0470",
+            "source_id": "gold-0470",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0722",
+            "source_id": "gold-0722",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-1037",
+            "source_id": "gold-1037",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0701",
+            "source_id": "gold-0701",
+            "score": 0.04411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-1006",
+            "source_id": "gold-1006",
+            "score": 0.043478260869565216
+          },
+          {
+            "chunk_id": "wochunk::gold-1053",
+            "source_id": "gold-1053",
+            "score": 0.04285714285714286
+          }
+        ],
+        "recall_at_10": 0.0,
+        "ndcg_at_10": 0.0,
+        "rank_of_first_hit": null
+      },
+      {
+        "id": "q-020",
+        "stratum": "multi_hop",
+        "text": "Are there assets where a fault was reported but no corrective activity was recorded in the same work order?",
+        "gold_evidence": [
+          "gold-0880",
+          "gold-0083",
+          "gold-0011",
+          "gold-0044",
+          "gold-0082",
+          "gold-0314",
+          "gold-0036",
+          "gold-0864"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::absence",
+            "source_id": "graph::absence",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0897",
+            "source_id": "gold-0897",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0436",
+            "source_id": "gold-0436",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0242",
+            "source_id": "gold-0242",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0455",
+            "source_id": "gold-0455",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-1061",
+            "source_id": "gold-1061",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0101",
+            "source_id": "gold-0101",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0115",
+            "source_id": "gold-0115",
+            "score": 0.04411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-0314",
+            "source_id": "gold-0314",
+            "score": 0.043478260869565216
+          },
+          {
+            "chunk_id": "wochunk::gold-0658",
+            "source_id": "gold-0658",
+            "score": 0.04285714285714286
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.07614334071738352,
+        "rank_of_first_hit": 9
+      },
+      {
+        "id": "q-021",
+        "stratum": "multi_hop",
+        "text": "Which corrective activities are most commonly paired with reported faults?",
+        "gold_evidence": [
+          "gold-0451",
+          "gold-0443",
+          "gold-0364",
+          "gold-0201",
+          "gold-0688",
+          "gold-0430",
+          "gold-0275",
+          "gold-0243"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "graph::pair::Activity-State",
+            "source_id": "graph::pair::Activity-State",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0695",
+            "source_id": "gold-0695",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0443",
+            "source_id": "gold-0443",
+            "score": 0.04837662337662337
+          },
+          {
+            "chunk_id": "wochunk::gold-0375",
+            "source_id": "gold-0375",
+            "score": 0.04837164750957854
+          },
+          {
+            "chunk_id": "wochunk::gold-0392",
+            "source_id": "gold-0392",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0494",
+            "source_id": "gold-0494",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0694",
+            "source_id": "gold-0694",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-1007",
+            "source_id": "gold-1007",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0908",
+            "source_id": "gold-0908",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0113",
+            "source_id": "gold-0113",
+            "score": 0.04411764705882353
+          }
+        ],
+        "recall_at_10": 0.125,
+        "ndcg_at_10": 0.12647135138382856,
+        "rank_of_first_hit": 3
+      },
+      {
+        "id": "q-022",
+        "stratum": "multi_hop",
+        "text": "Which components are changed out most often across the fleet?",
+        "gold_evidence": [
+          "gold-0555",
+          "gold-0418",
+          "gold-0556",
+          "gold-0594",
+          "gold-0595",
+          "gold-0574",
+          "gold-0596",
+          "gold-0575"
+        ],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::gold-0175",
+            "source_id": "gold-0175",
+            "score": 0.05178571428571428
+          },
+          {
+            "chunk_id": "graph::rank::Asset",
+            "source_id": "graph::rank::Asset",
+            "score": 0.04918032786885246
+          },
+          {
+            "chunk_id": "wochunk::gold-0140",
+            "source_id": "gold-0140",
+            "score": 0.04838709677419355
+          },
+          {
+            "chunk_id": "wochunk::gold-0554",
+            "source_id": "gold-0554",
+            "score": 0.047619047619047616
+          },
+          {
+            "chunk_id": "wochunk::gold-0402",
+            "source_id": "gold-0402",
+            "score": 0.04722222222222222
+          },
+          {
+            "chunk_id": "wochunk::gold-0555",
+            "source_id": "gold-0555",
+            "score": 0.046875
+          },
+          {
+            "chunk_id": "wochunk::gold-0142",
+            "source_id": "gold-0142",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::gold-0141",
+            "source_id": "gold-0141",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0556",
+            "source_id": "gold-0556",
+            "score": 0.04477611940298507
+          },
+          {
+            "chunk_id": "wochunk::gold-0143",
+            "source_id": "gold-0143",
+            "score": 0.04411764705882353
+          }
+        ],
+        "recall_at_10": 0.25,
+        "ndcg_at_10": 0.16624334936975121,
+        "rank_of_first_hit": 6
+      },
+      {
+        "id": "q-023",
+        "stratum": "unanswerable",
+        "text": "How much did the tail pulley replacement cost?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5806",
+            "source_id": "silver-5806",
+            "score": 0.04554079696394687
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "wochunk::silver-3091",
+            "source_id": "silver-3091",
+            "score": 0.032266458495966696
+          },
+          {
+            "chunk_id": "wochunk::gold-0804",
+            "source_id": "gold-0804",
+            "score": 0.03225806451612903
+          },
+          {
+            "chunk_id": "wochunk::silver-1443",
+            "source_id": "silver-1443",
+            "score": 0.031754032258064516
+          },
+          {
+            "chunk_id": "wochunk::gold-0724",
+            "source_id": "gold-0724",
+            "score": 0.031746031746031744
+          },
+          {
+            "chunk_id": "wochunk::silver-0250",
+            "source_id": "silver-0250",
+            "score": 0.03125
+          },
+          {
+            "chunk_id": "wochunk::silver-1465",
+            "source_id": "silver-1465",
+            "score": 0.03076923076923077
+          },
+          {
+            "chunk_id": "wochunk::silver-2049",
+            "source_id": "silver-2049",
+            "score": 0.030536130536130537
+          },
+          {
+            "chunk_id": "wochunk::silver-4665",
+            "source_id": "silver-4665",
+            "score": 0.030330882352941176
+          }
+        ],
+        "top1_score": 0.04554079696394687,
+        "mean_top10_score": 0.032923851288434294
+      },
+      {
+        "id": "q-024",
+        "stratum": "unanswerable",
+        "text": "Which supplier provided the replacement bearing?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5772",
+            "source_id": "silver-5772",
+            "score": 0.0637560803891449
+          },
+          {
+            "chunk_id": "wochunk::silver-0917",
+            "source_id": "silver-0917",
+            "score": 0.06374807987711213
+          },
+          {
+            "chunk_id": "wochunk::silver-1054",
+            "source_id": "silver-1054",
+            "score": 0.06158088235294118
+          },
+          {
+            "chunk_id": "wochunk::silver-4961",
+            "source_id": "silver-4961",
+            "score": 0.046153846153846156
+          },
+          {
+            "chunk_id": "wochunk::silver-6255",
+            "source_id": "silver-6255",
+            "score": 0.045454545454545456
+          },
+          {
+            "chunk_id": "wochunk::gold-0804",
+            "source_id": "gold-0804",
+            "score": 0.044136460554371
+          },
+          {
+            "chunk_id": "wochunk::silver-0250",
+            "source_id": "silver-0250",
+            "score": 0.04391088038070517
+          },
+          {
+            "chunk_id": "wochunk::silver-1465",
+            "source_id": "silver-1465",
+            "score": 0.043064182194616975
+          },
+          {
+            "chunk_id": "wochunk::silver-5778",
+            "source_id": "silver-5778",
+            "score": 0.042483660130718956
+          },
+          {
+            "chunk_id": "wochunk::silver-3885",
+            "source_id": "silver-3885",
+            "score": 0.04205790297339593
+          }
+        ],
+        "top1_score": 0.0637560803891449,
+        "mean_top10_score": 0.04963465204613979
+      },
+      {
+        "id": "q-025",
+        "stratum": "unanswerable",
+        "text": "On what date was the most recent pulley inspection carried out?",
+        "gold_evidence": [],
+        "retrieved": [
+          {
+            "chunk_id": "wochunk::silver-5377",
+            "source_id": "silver-5377",
+            "score": 0.06324404761904762
+          },
+          {
+            "chunk_id": "wochunk::silver-6781",
+            "source_id": "silver-6781",
+            "score": 0.061079219288174516
+          },
+          {
+            "chunk_id": "wochunk::silver-1791",
+            "source_id": "silver-1791",
+            "score": 0.048651507139079855
+          },
+          {
+            "chunk_id": "wochunk::silver-4759",
+            "source_id": "silver-4759",
+            "score": 0.0449486301369863
+          },
+          {
+            "chunk_id": "wochunk::silver-6180",
+            "source_id": "silver-6180",
+            "score": 0.04141414141414142
+          },
+          {
+            "chunk_id": "graph::lookup",
+            "source_id": "graph::lookup",
+            "score": 0.03278688524590164
+          },
+          {
+            "chunk_id": "wochunk::gold-0942",
+            "source_id": "gold-0942",
+            "score": 0.029850746268656716
+          },
+          {
+            "chunk_id": "wochunk::gold-0844",
+            "source_id": "gold-0844",
+            "score": 0.029411764705882353
+          },
+          {
+            "chunk_id": "wochunk::gold-0530",
+            "source_id": "gold-0530",
+            "score": 0.028985507246376812
+          },
+          {
+            "chunk_id": "wochunk::gold-0341",
+            "source_id": "gold-0341",
+            "score": 0.02857142857142857
+          }
+        ],
+        "top1_score": 0.06324404761904762,
+        "mean_top10_score": 0.04089438776356758
+      }
+    ]
+  }
+}

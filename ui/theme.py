@@ -37,8 +37,6 @@ PLAN_DESCRIPTIONS = {
 
 CSS = f"""
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600&family=Barlow+Semi+Condensed:wght@500;600;700&display=swap');
-
 :root {{
   --paper: {PAPER}; --surface: {SURFACE}; --ink: {INK}; --ink-2: {INK_2}; --ink-3: {INK_3};
   --rule: {RULE}; --asset: {ASSET}; --fault: {FAULT}; --action: {ACTION}; --graph: {GRAPH};
@@ -70,7 +68,7 @@ h3 {{ font-weight: 600 !important; font-size: 1.15rem !important; }}
 .brand {{ display: flex; gap: .7rem; align-items: center; margin: .2rem 0 1rem; }}
 .brand-mark {{ width: 38px; height: 38px; border-radius: 9px; background: var(--ink);
   display: grid; place-items: center; flex: none; }}
-.brand-name {{ font-family: 'Barlow Semi Condensed'; font-weight: 700; font-size: 1.35rem; line-height: 1; }}
+.brand-name {{ font-family: 'Barlow Semi Condensed', 'Arial Narrow', system-ui, sans-serif; font-weight: 700; font-size: 1.35rem; line-height: 1; }}
 .brand-sub {{ color: var(--ink-3); font-size: .8rem; line-height: 1.2; margin-top: .15rem; }}
 
 /* status lines */
@@ -83,13 +81,13 @@ h3 {{ font-weight: 600 !important; font-size: 1.15rem !important; }}
 
 /* annotated text: the MaintIE look */
 .annot {{ font-size: 1.02rem; line-height: 2.05; color: var(--ink); }}
-.annot.big {{ font-family: 'Barlow Semi Condensed'; font-weight: 500; font-size: 1.6rem; line-height: 1.9; }}
+.annot.big {{ font-family: 'Barlow Semi Condensed', 'Arial Narrow', system-ui, sans-serif; font-weight: 500; font-size: 1.6rem; line-height: 1.9; }}
 .ent {{ padding: .05em .18em .1em; border-radius: 3px; border-bottom: 2.5px solid currentColor;
   white-space: nowrap; position: relative; }}
 .ent-Asset {{ color: var(--asset); background: rgba(31,95,180,.08); }}
 .ent-State {{ color: var(--fault); background: rgba(184,110,0,.09); }}
 .ent-Activity {{ color: var(--action); background: rgba(0,138,115,.08); }}
-.ent .tag {{ font-family: 'Barlow'; font-size: .62rem; font-weight: 600; position: absolute;
+.ent .tag {{ font-family: 'Barlow', system-ui, -apple-system, 'Segoe UI', sans-serif; font-size: .62rem; font-weight: 600; position: absolute;
   left: .18em; bottom: -1.45em; line-height: 1; white-space: nowrap; opacity: .9; }}
 .annot.big .ent .tag {{ font-size: .7rem; bottom: -1.3em; }}
 .annot.big .ent span.inner {{ color: var(--ink); }}
@@ -120,7 +118,7 @@ h3 {{ font-weight: 600 !important; font-size: 1.15rem !important; }}
 .ev.cited {{ border-color: #9AA7B4; box-shadow: inset 4px 0 0 var(--ink); }}
 .ev.muted {{ opacity: .82; }}
 .ev-head {{ display: flex; flex-wrap: wrap; gap: .45rem .7rem; align-items: center; font-size: .82rem; color: var(--ink-3); margin-bottom: .3rem; }}
-.eid {{ font-family: 'Barlow Semi Condensed'; font-weight: 700; font-size: .95rem; color: var(--ink); min-width: 1.9rem; }}
+.eid {{ font-family: 'Barlow Semi Condensed', 'Arial Narrow', system-ui, sans-serif; font-weight: 700; font-size: .95rem; color: var(--ink); min-width: 1.9rem; }}
 .src {{ font-weight: 600; border-radius: 4px; padding: .05rem .4rem; font-size: .76rem; }}
 .src-work_order {{ background: #E8EEF6; color: #1B4F94; }}
 .src-manual {{ background: #EEE9F7; color: #5B3A99; }}
@@ -135,12 +133,12 @@ h3 {{ font-weight: 600 !important; font-size: 1.15rem !important; }}
 /* stat strip */
 .stats {{ display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: .6rem; margin: .4rem 0 1.2rem; }}
 .stat {{ background: var(--surface); border: 1px solid var(--rule); border-radius: 10px; padding: .7rem .9rem; }}
-.stat .v {{ font-family: 'Barlow Semi Condensed'; font-weight: 700; font-size: 1.7rem; line-height: 1.1; font-variant-numeric: tabular-nums; }}
+.stat .v {{ font-family: 'Barlow Semi Condensed', 'Arial Narrow', system-ui, sans-serif; font-weight: 700; font-size: 1.7rem; line-height: 1.1; font-variant-numeric: tabular-nums; }}
 .stat .l {{ color: var(--ink-3); font-size: .84rem; margin-top: .1rem; }}
 
 /* lab columns */
 .lab-item {{ border-top: 1px solid var(--rule); padding: .45rem 0 .5rem; font-size: .9rem; line-height: 1.45; }}
-.lab-item .r {{ font-family: 'Barlow Semi Condensed'; font-weight: 700; color: var(--ink-3); margin-right: .3rem; }}
+.lab-item .r {{ font-family: 'Barlow Semi Condensed', 'Arial Narrow', system-ui, sans-serif; font-weight: 700; color: var(--ink-3); margin-right: .3rem; }}
 .lab-item .meta {{ color: var(--ink-3); font-size: .78rem; margin-top: .1rem; }}
 .shared {{ display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 3px; vertical-align: 0; }}
 .timing {{ color: var(--ink-3); font-size: .8rem; }}

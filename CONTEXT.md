@@ -92,4 +92,4 @@ Graph retrieval reads the work-order graph once into memory (`graph/kg_index.py`
 
 **Working rules for any Claude Code session:** read this file first; verify version-sensitive APIs (Neo4j syntax especially) against real docs, not memory; build one module at a time and verify each step before the next.
 
-# Do not add dependencies, services, or datastores not listed here. If deemed extremely important, mission-critical, or a straight-up better option, then flag and ask. 
+# Do not add dependencies, services, or datastores not listed here. If deemed extremely important, mission-critical, or a straight-up better option, then flag and ask. 
