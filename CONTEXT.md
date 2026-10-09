@@ -88,7 +88,11 @@ The repo holds **code, prompts, the three manual PDFs, the question sets and eva
 
 Graph retrieval reads the work-order graph once into memory (`graph/kg_index.py`, four read-only Cypher queries, ~1-3 s) and answers from there; Neo4j stays the only store and nothing is written. Aggregate graph plans count over gold-annotated work orders by default (the question set's gold evidence was built the same way), falling back to all work orders when gold has no match.
 
-**Still not built:** ISO 14224 FailureMode mapping, AssetClass hierarchy, WorkOrder-REFERENCES->ManualSection links, RUL prediction nodes, a retrieval-confidence refusal threshold, and RAGAS answer-level metrics.
+**Safety gate (built):** `generation/safety.py` classifies procedural / safety-critical questions by rule, answers them only from manual-only evidence that clears a dense-score threshold (0.81) and a lexical-coverage check (0.2), and otherwise refuses without calling the LLM; safety-critical answers carry a fixed warning. The thresholds are PROVISIONAL (tuned on a few dozen developer-written probes, see `eval/safety_probes.py`, `report/results.md` section 4). `POST /query` returns the decision in `gate`. Non-procedural unanswerable questions are not gated; they rely on the prompt's "The evidence does not contain" rule.
+
+**Evaluation tooling (built):** `eval/harness.py` (recall, nDCG, hit rate, warm p50/p95 latency), `eval/bootstrap.py` (paired bootstrap intervals), `eval/error_analysis.py` (categorised failures), `eval/safety_probes.py` (gate confusion matrices), `tests/test_safety.py` (plain-assert unit tests, run with `python tests/test_safety.py`). Results and caveats are written up in `report/results.md`; read its section 6 before quoting any number.
+
+**Still not built:** ISO 14224 FailureMode mapping and ISO 15926 AssetClass hierarchy (need the MWO2KG data), WorkOrder-REFERENCES->ManualSection links, RUL prediction nodes (need NASA C-MAPSS), RAGAS faithfulness / answer-relevance metrics, and the 100+ question human-authored benchmark (the current set has 24 questions and was also used to tune the fusion weights). Do not generate benchmark questions or ISO codes: decision D8 requires human-authored evaluation data, and the ISO code sets must come from the MWO2KG resources, not from memory.
 
 **Working rules for any Claude Code session:** read this file first; verify version-sensitive APIs (Neo4j syntax especially) against real docs, not memory; build one module at a time and verify each step before the next.
 

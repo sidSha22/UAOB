@@ -52,5 +52,8 @@ it and must be set up on this machine.
 Graph retrieval (`retrieval/graph_search.py`), RRF fusion (`retrieval/fusion.py`)
 and a single retrieval entry point (`retrieval/router.py`, modes `hybrid`,
 `bm25`, `dense`, `graph`) are built and used by the API, the Streamlit app and
-the eval harness. See CONTEXT.md "Where the project stands" for what is still
-not built.
+the eval harness. A rule-based safety gate (`generation/safety.py`) sits in
+front of generation for procedural questions. See CONTEXT.md "Where the project
+stands" for what is still not built, and `report/results.md` for the latest
+numbers and their caveats. Do not invent benchmark questions or ISO 14224 /
+ISO 15926 codes: those need human authors and the MWO2KG data respectively.

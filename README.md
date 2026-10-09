@@ -94,7 +94,7 @@ python eval/harness.py                                # writes artifacts/eval_*.
 | `GET /health` | Neo4j, LLM and BM25-index status |
 | `GET /stats` | Node and edge counts |
 | `POST /search` | Retrieval only: `{"query", "mode": "hybrid"\|"bm25"\|"dense"\|"graph", "k", "scope": "gold"\|"all"}` |
-| `POST /query` | Retrieval + cited answer (503 with a clear message if the LLM is down) |
+| `POST /query` | Safety gate + retrieval + cited answer (503 with a clear message if the LLM is down). The response includes `gate`: the intent, the decision (`answer`, `answer_with_warning`, `refuse`) and why |
 | `GET /assets?q=pump` | Find assets |
 | `GET /assets/{id}` | Asset profile: faults, activities, parts, work orders |
 
@@ -107,5 +107,8 @@ python eval/harness.py                                # writes artifacts/eval_*.
 | `retrieval/` | `bm25.py`, `dense.py`, `graph_search.py`, `fusion.py` (RRF), `router.py` (single entry point) |
 | `generation/` | Prompts (`prompts/*_v2.txt` current), LLM adapter, citation enforcement, `pipeline.py` |
 | `api/`, `ui/` | FastAPI service; Streamlit app (`ui/app.py`, pages in `ui/views/`) |
-| `eval/`, `questions/`, `artifacts/` | Harness, question sets, results |
+| `generation/safety.py` | Rule-based safety gate for procedural questions |
+| `eval/`, `questions/`, `artifacts/` | Harness, bootstrap, error analysis, safety probes, question sets, results |
+| `tests/` | Plain-assert unit tests: `python tests/test_safety.py` |
+| `report/results.md` | Results, caveats and open work. Read before quoting any number |
 | `manuals/` | Public vendor PDFs used as the manual corpus |
