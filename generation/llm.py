@@ -16,10 +16,14 @@ DEFAULT_TIMEOUT = 180
 DEFAULT_MAX_TOKENS = 1536
 
 
+# The value shipped in .env.example; treated as "no LLM configured yet".
+PLACEHOLDER_MODELS = {"your-model-name"}
+
+
 def _config():
     base_url = os.environ.get("LLM_BASE_URL")
     model = os.environ.get("LLM_MODEL")
-    if not base_url or not model:
+    if not base_url or not model or model in PLACEHOLDER_MODELS:
         raise RuntimeError(
             "Missing LLM_BASE_URL or LLM_MODEL environment variable(s). "
             "Set them in the environment or in a .env file (see .env.example)."
@@ -65,3 +69,28 @@ def chat(messages, temperature=0.0, max_tokens=DEFAULT_MAX_TOKENS):
         return data["choices"][0]["message"]["content"]
     except (KeyError, IndexError) as exc:
         raise RuntimeError(f"Unexpected LLM response shape from {base_url}: {data}") from exc
+
+
+def status(timeout=3):
+    """Non-raising health probe for the UI/API: is an LLM configured, and
+    does its OpenAI-compatible server answer GET /models? Returns
+    {configured, reachable, base_url, model, detail}."""
+    base_url = os.environ.get("LLM_BASE_URL")
+    model = os.environ.get("LLM_MODEL")
+    configured = bool(base_url and model) and model not in PLACEHOLDER_MODELS
+    out = {"configured": configured, "reachable": False,
+           "base_url": base_url, "model": model, "detail": ""}
+    if not out["configured"]:
+        out["detail"] = "LLM_BASE_URL / LLM_MODEL not set in .env"
+        return out
+    headers = {}
+    api_key = os.environ.get("LLM_API_KEY")
+    if api_key:
+        headers["Authorization"] = f"Bearer {api_key}"
+    try:
+        resp = requests.get(f"{base_url.rstrip('/')}/models", headers=headers, timeout=timeout)
+        out["reachable"] = resp.status_code < 500
+        out["detail"] = f"HTTP {resp.status_code}"
+    except requests.exceptions.RequestException as exc:
+        out["detail"] = f"unreachable: {type(exc).__name__}"
+    return out

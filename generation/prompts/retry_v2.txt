@@ -1,0 +1,5 @@
+Your previous answer contained the following sentence(s) with no resolvable citation to the evidence provided:
+
+{problem_sentences}
+
+Rewrite your full answer from scratch. Every factual sentence must end with a citation like (E1) or (E1, E3), referencing only the evidence IDs given above -- do not invent evidence IDs. If a claim cannot be supported by the evidence, remove it, or replace it with a sentence that begins with exactly "The evidence does not contain".

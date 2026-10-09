@@ -1,0 +1,6 @@
+Evidence:
+{evidence_block}
+
+Question: {query}
+
+Answer the question using only the evidence above, following the citation rules.

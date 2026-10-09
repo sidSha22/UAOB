@@ -1,5 +1,6 @@
-"""Retrieval-only evaluation harness. Runs retrieval/bm25.py and
-retrieval/dense.py at k=10 against questions/questions.json and scores
+"""Retrieval-only evaluation harness. Runs every retrieval mode (bm25,
+dense, graph, hybrid RRF -- see retrieval/router.py) at k=10 against
+questions/questions.json and scores
 Recall@10, nDCG@10, and rank-of-first-hit per question, aggregated by
 stratum. No LLM, no generation, no API -- retrieval scoring only.
 
@@ -7,7 +8,19 @@ For the unanswerable stratum (empty gold_evidence), Recall/nDCG/rank are
 undefined; top-1 score and mean top-10 score are recorded instead, kept
 separate from the main metrics table since they're what a confidence
 threshold would consume later, not a correctness signal.
+
+Graph "fact" results (source_type 'graph', source_id 'graph::...') are
+serialised aggregations, not records; they can never match gold evidence,
+so they only cost the graph/hybrid modes a slot -- a conservative choice.
+
+Usage:
+  python eval/harness.py                       # all modes
+  python eval/harness.py --modes bm25 graph    # a subset
+A mode that fails (e.g. dense before the embedding model is downloaded) is
+reported and skipped instead of aborting the whole run.
 """
+
+import argparse
 
 import json
 import math
@@ -17,14 +30,13 @@ from pathlib import Path
 
 _ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(_ROOT / "retrieval"))
-import bm25 as bm25_mod  # noqa: E402
-import dense as dense_mod  # noqa: E402
+import router  # noqa: E402
 
 QUESTIONS_PATH = _ROOT / "questions" / "questions.json"
 ARTIFACTS_DIR = _ROOT / "artifacts"
 
 K = 10
-MODES = {"bm25": bm25_mod.search, "dense": dense_mod.search}
+MODES = list(router.MODES[1:]) + ["hybrid"]  # bm25, dense, graph, hybrid
 
 
 def dcg(relevances):
@@ -164,15 +176,38 @@ def print_failures(rows_by_mode):
 
 
 def main():
+    parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
+    parser.add_argument("--modes", nargs="+", default=MODES, choices=router.MODES)
+    args = parser.parse_args()
+
     with open(QUESTIONS_PATH, encoding="utf-8") as f:
         questions = json.load(f)["questions"]
 
     rows_by_mode = {}
     agg_by_mode = {}
-    for mode, search_fn in MODES.items():
-        rows = [score_question(q, search_fn(q["text"], k=K), K) for q in questions]
+    errors = {}
+    for mode in args.modes:
+        try:
+            rows = []
+            for q in questions:
+                out = router.search_detailed(q["text"], mode=mode, k=K)
+                for name, msg in out["errors"].items():
+                    errors.setdefault(f"{mode}/{name}", msg)
+                rows.append(score_question(q, out["results"], K))
+        except Exception as exc:
+            errors[mode] = f"{type(exc).__name__}: {exc}"
+            print(f"[skip] {mode}: {errors[mode]}")
+            continue
         rows_by_mode[mode] = rows
         agg_by_mode[mode] = aggregate(rows)
+
+    if not agg_by_mode:
+        print("No retrieval mode could be evaluated.")
+        sys.exit(1)
+    if errors:
+        print("\nWarnings (components that failed and were skipped):")
+        for name, msg in errors.items():
+            print(f"  {name}: {msg}")
 
     print_metric_table("Recall@10", agg_by_mode, "recall_at_10", pct=True)
     print_metric_table("nDCG@10", agg_by_mode, "ndcg_at_10")
@@ -189,6 +224,8 @@ def main():
             "timestamp": timestamp,
             "k": K,
             "n_questions": len(questions),
+            "modes": list(agg_by_mode),
+            "errors": errors,
             "aggregate": agg_by_mode,
             "per_question": rows_by_mode,
         }, f, indent=2)
