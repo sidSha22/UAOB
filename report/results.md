@@ -46,9 +46,13 @@ Warm retrieval latency per query, one warm-up query excluded:
 | Graph | 5.0 ms | 10.8 ms |
 | Hybrid | 42.7 ms | 64.1 ms |
 
-End-to-end answers are far slower: on this laptop (RTX 4060, 16 GB RAM, Gemma
-12B Q4 through llama.cpp) one cited answer took 70 to 190 seconds, almost all of
-it generation. Answer latency is not yet measured as p50/p95.
+End-to-end answers are far slower because generation dominates. On this laptop
+(RTX 4060, 16 GB RAM, Gemma 12B Q4 through llama.cpp) one cited answer took
+70 to 190 seconds with the model's internal "thinking" on, and 9 to 28 seconds
+with it off (`--reasoning off`, which `start_demo.bat` sets). A later warm run
+after a GPU switchover measured 16 to 23 seconds, of which retrieval was about
+0.17 seconds. These are single observations from manual runs, not a p50/p95
+benchmark; answer latency is not yet measured that way.
 
 **Reading the table.** The graph and hybrid retrievers clearly beat the text
 baselines, mostly on multi-hop questions that need counting across work orders.
@@ -104,9 +108,15 @@ topic. It does not check that they contain a procedure. The manual text
 retrieved for the lagging question is a troubleshooting table ("pulley lagging
 worn: replace worn pulley lagging") with no replacement steps, so the question
 "How do I replace the lagging on a conveyor pulley?" passes the gate (score
-0.92) and the model then correctly answers that the evidence has no
-instructions. The citation check is the second layer that keeps the model from
-inventing steps.
+0.92). What the model then says depends on its settings. With thinking on it
+answered that the evidence has no instructions. With thinking off (the demo
+setting) it gave a cited answer restating the table's advice: replace the worn
+lagging, use grooved lagging for wet conditions, ceramic lagging where rubber
+fails. Both stay inside the cited evidence and neither is a step-by-step
+procedure, because the manuals do not contain one. The citation check is the
+second layer that keeps the model from inventing steps, but a listener could
+mistake the second kind of answer for a procedure, so say what it is when
+showing it.
 
 Another finding that predates the gate: before it, hybrid retrieval returned no
 manual chunks at all for procedural questions, because 176 manual chunks sit
@@ -115,11 +125,15 @@ directly.
 
 ## 5. What the system does end to end
 
-Five questions were run through the real pipeline with the local LLM: two record
-questions (both answered with citations), one procedural question that passed
-the gate (the model honestly reported no instructions), one safety-critical
-question (answer plus the fixed warning), and one off-topic question (refused
-instantly with manual pointers, no LLM call).
+Seven questions were run through the real pipeline with the local LLM, thinking
+off: four record or aggregate questions (all answered with citations: engine
+15 work orders is the most-replaced component; 43 assets have both a
+replacement and a repair; 78 asset/fault pairs recur, "blown" hose 19 times;
+the tail pulley's history), one procedural question that passed the gate (a
+cited restatement of the manual's lagging advice, see section 4), one
+safety-critical question (the model said the evidence has no isolation
+procedure, followed by the fixed warning), and one off-topic question (refused
+in about 2 seconds with manual pointers, no LLM call).
 
 ## 6. Caveats
 

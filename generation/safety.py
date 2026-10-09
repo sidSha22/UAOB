@@ -10,11 +10,18 @@ Two parts, both deterministic and auditable (no LLM involved):
      informational    everything else, including questions that merely
                       mention a safety term ("Which pumps were isolated?")
 
-2. Evidence gate. A procedural question may only be answered from equipment
-   manuals, never from work-order fragments (a work order records that
-   something was done, not how to do it safely). The gate looks for manual
-   chunks whose dense score reaches MANUAL_SCORE_THRESHOLD:
-     enough manual evidence -> "answer" (procedural) or
+2. Evidence gate. A procedural question may only be answered when equipment
+   manuals support it: a work order records that something was done, not how
+   to do it safely, so work orders alone never unlock an answer. (Once the
+   gate passes, up to HISTORY_RESULTS related work orders are added as
+   history next to the manual evidence; see generation/pipeline.py.)
+   The gate needs BOTH of:
+     - a manual chunk whose dense score reaches MANUAL_SCORE_THRESHOLD, and
+     - lexical support: at least MIN_LEXICAL_COVERAGE of the question's
+       content words appear in the top manual evidence. Dense score alone is
+       not enough on a small domain corpus: "How do I tie a tie?" scored 0.811
+       against the pulley manuals.
+   Both met -> "answer" (procedural) or
                                "answer_with_warning" (safety_critical)
      otherwise              -> "refuse": no instructions are generated and
                                the user is pointed to the closest manual

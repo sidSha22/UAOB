@@ -30,6 +30,13 @@ part-of), counts over the graph, and returns a serialised *graph fact* plus
 the supporting work orders. Aggregations default to the 1,076 human-annotated
 (gold) work orders; switch to all 8,076 in the UI or with `scope="all"`.
 
+## Quick demo (Windows)
+
+Open Docker Desktop, then double-click `start_demo.bat`. It starts the database,
+local model, API and app, and opens the browser; `stop_demo.bat` shuts it all
+down. On a fresh machine run `run_uaob.bat` once first to build the database.
+[DEMO.md](DEMO.md) has a walk-through for showing it to someone.
+
 ## Setup
 
 You need Docker, Python 3.11+ and git. On machines with several Python
