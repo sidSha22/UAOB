@@ -78,6 +78,24 @@ def warm_bm25():
     return True
 
 
+@st.cache_resource(show_spinner="Loading the embedding model (first start only)...")
+def warm_dense():
+    import dense
+    dense.search("warm up", k=1)
+    return True
+
+
+def warm_all():
+    """Load every heavy index once per server process so the first question is
+    fast. Failures are ignored here: each page already shows a clear message
+    when Neo4j or the embedding model is unavailable."""
+    for load in (kg, warm_bm25, warm_dense):
+        try:
+            load()
+        except Exception:
+            pass
+
+
 # ------------------------------------------------------------------ queries
 @st.cache_data(ttl=900, show_spinner=False, max_entries=256)
 def ask(query, mode, k, scope, generate):

@@ -24,6 +24,7 @@ import theme  # noqa: E402
 from views import ask, assets, evaluation, lab, system  # noqa: E402
 
 theme.inject_css()
+data.warm_all()
 
 pages = {
     "ask": st.Page(ask.render, title="Ask", icon=":material/forum:", url_path="ask", default=True),
