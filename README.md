@@ -118,4 +118,5 @@ python eval/harness.py                                # writes artifacts/eval_*.
 | `eval/`, `questions/`, `artifacts/` | Harness, bootstrap, error analysis, safety probes, question sets, results |
 | `tests/` | Plain-assert unit tests: `python tests/test_safety.py` |
 | `report/results.md` | Results, caveats and open work. Read before quoting any number |
+| `report/background_for_documentation.md` | Spec summary, decisions, history, environment and open questions: what the code does not tell you |
 | `manuals/` | Public vendor PDFs used as the manual corpus |

@@ -42,8 +42,8 @@ it and must be set up on this machine.
   docs, not memory. Build one module at a time and verify before the next.
 - Never commit `.env` or any secret. `maintie/` and `retrieval/bm25_index/` are
   git-ignored on purpose.
-- Access is by invitation to exactly two people. Do not make the repo public,
-  add collaborators, or share its contents elsewhere.
+- Access is only for people the owner has invited. Do not make the repo public,
+  add collaborators, or share its contents elsewhere; ask the owner instead.
 - You have write access, so protect `master`: work on a branch, never
   force-push, and open a pull request or ask the owner before merging.
 
